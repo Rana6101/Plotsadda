@@ -1,0 +1,16 @@
+.banner{
+    height: 45vh;
+    background: url('../../assets/How-to-Contact-Us.png');
+    background-repeat: round;
+}
+.card{
+    border-radius: 25px;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .banner{
+        background: url('../../assets/ContactUsResponsive.jpg');
+        background-repeat: round;
+    }
+}

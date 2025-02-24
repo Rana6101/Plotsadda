@@ -1,0 +1,13 @@
+.main{
+    height: 90vh;
+    overflow-y: scroll;
+}
+footer{
+    display: none;
+}
+*{
+    background-color: #F4F5F7;
+}
+*:active{
+    --bs-primary-text-emphasis:blue;
+}

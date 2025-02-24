@@ -1,0 +1,67 @@
+.banner{
+    height: 500px;
+    background: url('../../assets/Blogs-gbg.png');
+    background-repeat: round;
+}
+.wrapper{
+    background: #EAF3FD;
+}
+.blogs-section{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.card:hover{
+    border-radius: 25px;
+    /* background: #c8d2dc; */
+}
+.card:hover {
+    box-shadow: 0 4px 15px rgba(8, 153, 64, 0.5); /* Optional shadow effect on hover */
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    transform: scale(1.02);
+    transition: transform 0.5s ease;
+}
+.card img{
+    height: 250px;
+    border-radius: 25px;
+}
+.card-body{
+    height: 250px;
+    padding: 30px;
+    overflow: hidden;
+}
+.card{
+    background: #EAF3FD;
+
+    border: none;
+
+}
+.post_info{
+    font-size: 12px;
+    margin-bottom: 0;
+}
+.newsLetter{
+    background: #15A037;
+    color: #fafafa;
+    
+}
+.instaTitle{
+    background: linear-gradient(45deg, #f9ed32 0%, #ee2a7b 62%, #002aff 100%);
+}
+@media only screen and (min-width: 600px) and (max-width:1024px) {
+    .blogs-section{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .banner{
+        height: 350px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .blogs-section{
+        display: grid;
+        grid-template-columns: auto ;
+    }
+    .banner{
+        height: 250px;
+    }
+}

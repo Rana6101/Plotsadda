@@ -1,0 +1,8 @@
+.user{
+    background: #ffffff;
+    border-radius: 25px;
+}
+.user .user-profile-pic{
+    border-radius: 50%;
+    width: 100%;
+}

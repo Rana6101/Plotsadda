@@ -1,0 +1,30 @@
+.property_img{
+    width: 100%;
+}
+.sec1-list{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+.sec1-list svg{
+    width: 50px;
+    height: 50px;
+}
+.sec1, .sec3, .sec5, .sec7{
+    background: #FAFAFA;
+}
+.sec1, .sec2, .sec3, .sec4, .sec5, .sec6, .sec7, .sec8{
+    padding: 20px;
+}
+.sec_heading{
+    border-right: 2px solid #E5E5E5;
+}
+.main{
+    background: #fff9f9;
+}
+.product-img{
+    border-radius: 25px;
+}
+.btn_img{
+    width: 25px;
+}

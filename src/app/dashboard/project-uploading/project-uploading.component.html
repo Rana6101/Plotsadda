@@ -1,0 +1,89 @@
+<div  class="blog-posting col-12">
+    <div class="container">
+      <div class="main-section  my-4 d-flex">
+        <div class="col-1"> </div>
+        <div class="user col-10  p-4   d-flex">
+            <div class="col-2 d-none d-md-block d-lg-block text-center">
+              <img src="../assets/04-label.JPG" alt="" class="label-img">
+              <div class="label p-2">Add New Project</div>
+            </div>
+            <div class="col-12 col-md-10 col-lg-10">
+              <form [formGroup]="projectForm">
+              <div class=" container px-1 px-md-4 px-lg-4">
+                <div class="d-flex ">
+                    <div class="col-12 p-0 px-md-4 px-lg-4 py-md-2 py-lg-2 ">
+                        <div><label for="">Title</label></div>
+                        <div class="d-flex">
+                          <input type="text" formControlName="project_title" class="w-100 p-2 form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex ">
+                  <div class="col-12 p-0 px-md-4 px-lg-4 py-md-2 py-lg-2 ">
+                      <div><label for="">Project Cost</label></div>
+                      <div class="d-flex">
+                        <input type="text" formControlName="project_cost" class="w-100 p-2 form-control">
+                      </div>
+                  </div>
+              </div>
+              <div class="d-flex ">
+                <div class="col-12 p-0 px-md-4 px-lg-4 py-md-2 py-lg-2 ">
+                    <div><label for="">Project Location</label></div>
+                    <div class="d-flex">
+                      <input type="text" formControlName="project_location" class="w-100 p-2 form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex ">
+              <div class="col-12 p-0 px-md-4 px-lg-4 py-md-2 py-lg-2 ">
+                  <div><label for="">Project Type</label></div>
+                  <div class="d-flex">
+                    <input type="text" formControlName="project_type" class="w-100 p-2 form-control">
+                  </div>
+              </div>
+          </div>
+          <div class="d-flex ">
+            <div class="col-12 p-0 px-md-4 px-lg-4 py-md-2 py-lg-2 ">
+                <div><label for="">Project Area</label></div>
+                <div class="d-flex">
+                  <input type="text" formControlName="project_area" class="w-100 p-2 form-control">
+                </div>
+            </div>
+        </div>
+        <div class="d-flex px-3">
+          <div class="col-12 px-0 px-md-2 px-lg-2 py-2 d-flex">
+            <div class="w-100"><label for="" >Mark as Hot</label></div>
+            <div>
+              <div class="form-switch  w-100">
+                <input class="form-check-input" formControlName="mark_as_hot" type="checkbox" id="flexSwitchCheckChecked">
+                <label class="form-check-label m-0" for="flexSwitchCheckChecked"></label>
+                </div>
+            </div>
+        </div>
+        </div>        
+                <div class="d-flex ">
+                  <div class="col-12 p-0 px-md-4 px-lg-4 py-md-2 py-lg-2">
+                      <div><label for="">Feature Image</label></div>
+                      <div class="d-flex">
+                        <input type="file" (change)="onUploadChange($event)" accept=".png, .jpg, .jpeg, .pdf" formControlName="project_pic" class="form-control w-100 p-2">
+                      </div>
+                  </div>
+              </div>
+                <div class="d-flex ">
+                  <div class="col-12 p-0 px-md-4 px-lg-4 py-md-2 py-lg-2">
+                      <div><label for="">Description</label></div>
+                      <div><textarea name="" formControlName="project_des" class="w-100 p-2 form-control" id=""></textarea></div>
+                  </div>
+              </div>
+              <div class="px-4">
+
+                <button class="btn w-100 btn-primary p-2" (click)="addProject()">Upload</button>
+              </div>
+            </div>
+          </form>
+            </div>
+            <div class="col-1"></div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,91 @@
+<div class=" col-12 ">
+    <div class="container_fluid">
+       <h1 class=" p-4">Welcome User</h1>
+     <div class="col-12 px-4 table_container">
+       <h5>Public User Details</h5>
+       <table style="height:30vh" class="vh-30 table table-hover">
+           <thead>
+             <tr>
+               <th scope="col">Sr#</th>
+               <th scope="col">Name</th>
+               <th scope="col">Role</th>
+               <th scope="col">Email</th>
+               <th scope="col">Phone</th>
+             </tr>
+           </thead>
+           <tbody>
+             <tr *ngFor="let user of userRole">
+               <th scope="row">{{userIndex}}</th>
+               <td>{{user.name}}</td>
+               <td>{{user.role}}</td>
+               <td>{{user.email}}</td>
+               <td>{{user.phone || 0300-0000000}}</td>
+             </tr>
+           </tbody>
+         </table>
+     </div>
+     <div class="col-12 px-4 table_container" >
+       <h5>Agents Details</h5>
+       <table class="table table-hover">
+           <thead>
+             <tr>
+               <th scope="col">Sr#</th>
+               <th scope="col">Name</th>
+               <th scope="col">Role</th>
+               <th scope="col">Email</th>
+               <th scope="col">Phone</th>
+             </tr>
+           </thead>
+           <tbody>
+             <tr *ngFor="let agent of agentRole">
+               <th scope="row">1</th>
+               <td>{{agent.name}}</td>
+               <td>{{agent.role}}</td>
+               <td>{{agent.email}}</td>
+               <td>{{agent.phone}}</td>
+             </tr>
+             <tr>
+               <th scope="row">2</th>
+               <td>Jacob</td>
+               <td>Agent</td>
+               <td>example&#64;email.com</td>
+               <td>0300-0000000</td>
+             </tr>
+             <tr>
+               <th scope="row">3</th>
+               <td>acob</td>
+               <td>Agent</td>
+               <td>example&#64;email.com</td>
+               <td>0300-0000000</td>
+             </tr>
+           </tbody>
+         </table>
+     </div>
+
+     <div class="col-12 px-4 table_container">
+      <h5>Message Details</h5>
+      <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Phone</th>
+              <th scope="col">Email</th>
+              <th scope="col">City</th>
+              <th scope="col">Subject</th>
+              <th scope="col">Message</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let message of messageList">
+              <td>{{message.user_name}}</td>
+              <td>{{message.phone}}</td>
+              <td>{{message.email}}</td>
+              <td>{{message.city}}</td>
+              <td>{{message.subject}}</td>
+              <td>{{message.message}}</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+    </div>
+   </div>

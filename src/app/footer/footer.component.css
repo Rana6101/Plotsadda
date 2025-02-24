@@ -1,0 +1,17 @@
+.footer{
+    background: #1f1f1f;
+}
+.footer ul li{
+    list-style: none;
+    color: #d3d3d3;
+}
+.footer ul li a{
+    text-decoration: none;
+    color: #d3d3d3;
+}
+.facebook_logo{
+    border-radius: 50%;
+}
+.social-link img{
+    width: 30px;
+}

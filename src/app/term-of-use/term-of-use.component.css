@@ -1,0 +1,19 @@
+.banner{
+    height: 45vh;
+    background: url('../../assets/term.png');
+    background-repeat: round;
+}
+.banner h1{
+    margin: 18vh 100px;
+}
+
+.indent{
+    margin-left: 25px;
+}
+@media only screen and (max-width: 600px) {
+    .banner{
+        background: url('../../assets/mobile-termofuse.jpg');
+        background-repeat: round;
+
+    }
+}

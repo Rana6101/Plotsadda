@@ -1,0 +1,17 @@
+.banner{
+    height: 45vh;
+    background: url('../../assets/about-us-with-out-layer.png');
+    background-repeat: round;
+}
+.banner h1{
+    margin: 18vh 100px;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .banner{
+        background: url('../../assets/mobile-about-us.jpg');
+        background-repeat: round;
+
+    }
+}

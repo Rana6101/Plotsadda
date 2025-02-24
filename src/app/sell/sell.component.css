@@ -1,0 +1,41 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+.banner{
+    height: 500px;
+    background: url('../../assets/Sell_home.png');
+    background-repeat: round;
+}
+.compare-input{
+    outline : 1px solid rgb(114, 114, 114);
+    border-radius: 5px;
+}
+.compare-input input{
+    border: none;
+}
+.compare-input:hover{
+    outline :  1px solid rgb(19, 121, 254);
+    border-radius: 5px;
+}
+.first-block{
+    background: #F2FaF2;
+}
+.third-block{
+    background: #F2FaF2;
+}
+a{
+    color: #f2faf2;
+    text-decoration: none;
+}
+@media only screen and (min-width: 600px) and (max-width:1024px) {
+
+    .banner{
+        height: 350px;
+    }
+}
+@media only screen and (max-width: 600px) {
+
+    .banner{
+        height: 250px;
+    }
+}

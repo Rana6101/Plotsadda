@@ -1,0 +1,459 @@
+<div id="listing" class="listing col-12" >
+    <div class="container_fluid">
+      <form action="" [formGroup]="listingForm">
+      <div class="1st-section my-4 d-flex">
+        <div class="col-1 d-none d-md-block d-lg-block"></div>
+        <div class="user col-12 col-md-10 col-lg-10 p-4 d-flex">
+            <div class="col-2 d-none d-md-block d-lg-block text-center">
+              <img src="../assets/01-label.JPG" alt="" class="label-img">
+              <div class="label p-2">Location and Purpose</div>
+            </div>
+            <div class="col-12 col-md-10 col-lg-10">
+                <div class="form container px-lg-4 px-md-3 px-0">
+                      <div class="px-lg-4 px-md-3 px-0">
+                        <div class="label">
+                          <label for=""><b>I want to</b></label>
+                        </div>
+                        <div class="px-0 px-md-2 px-lg-2 d-flex" >
+                          <div class="form-check px-2"> 
+                            <input type="radio" class="btn-check" formControlName="purpose" value="sell" id="sell" autocomplete="off" >
+                            <label class="btn btn-outline-success" for="sell" >
+                               <!-- <span><img src="../assets//buy_listing_btn.jpg" class="btn_img" alt=""></span>  -->
+                               Sell Out</label>
+                          </div>
+                          <div class="form-check px-2"> 
+                            <input type="radio" class="btn-check" formControlName="purpose" value="rent" id="rent" autocomplete="off" >
+                            <label class="btn btn-outline-success" for="rent" >
+                              <!-- <span><img src="../assets/rent_listing_btn.jpg" class="btn_img" alt=""></span> -->
+                              Rent Out</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="px-0 px-md-2 px-lg-2 w-100">
+                        <div class="label">
+                          <label for=""><b>Select Property Type</b></label>
+                        </div>
+                        <div class="tab">
+                           <!-- Tabs Navigation -->
+    <ul class="nav nav-tabs custom-tabs" id="locationTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="for-home-tab" data-bs-toggle="tab" data-bs-target="#for-sale" type="button" role="tab" aria-controls="for-sale" aria-selected="true">Home</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="for-plot-tab" data-bs-toggle="tab" data-bs-target="#for-plot" type="button" role="tab" aria-controls="for-plot" aria-selected="false">Plots</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="for-commercial-tab" data-bs-toggle="tab" data-bs-target="#for-commercial" type="button" role="tab" aria-controls="for-commercial" aria-selected="false">Commercial</button>
+      </li>
+    </ul>
+  
+    <!-- Tabs Content -->
+    <div class="tab-content" id="locationTabsContent">
+      <!-- For home Tab -->
+      <div class="tab-pane fade show active" id="for-sale" role="tabpanel" aria-labelledby="for-home-tab">
+        <div class="type_container my-3">
+            <div class="form-check">
+              <input type="radio"  formControlName="property_type" id="house" value="H-house" class="form-check-input" >
+              <label for="house" class=" form-check-label ">House</label>
+            </div>
+            <div class="form-check">
+              <input type="radio" id="Flat" class="form-check-input" value="H-flat" formControlName="property_type" >
+              <label for="Flat" class="form-check-label">Flat</label>
+            </div>
+            <div class="form-check">
+              <input type="radio"  id="UpperPortion" class="form-check-input" value="H-upper_portion" formControlName="property_type" >
+              <label for="UpperPortion" class="form-check-label">Upper Portion</label>
+            </div>
+            <div class="form-check">
+              <input type="radio"  id="LowerPortion" class="form-check-input" value="H-lower_portion" formControlName="property_type" >
+              <label for="LowerPortion" class="form-check-label">Lower Portion</label>
+            </div>
+            <div class="form-check">
+              <input type="radio"  id="FarmHouse" class="form-check-input" value="H-farm_house" formControlName="property_type" >
+              <label for="FarmHouse" class="form-check-label">Farm House</label>
+            </div>
+            <div class="form-check">
+              <input type="radio" id="room" class="form-check-input" value="H-room" formControlName="property_type" >
+              <label for="room" class="form-check-label">Room</label>
+            </div>
+            <div class="form-check">
+              <input type="radio"  id="Penthouse" class="form-check-input" value="H-penthouse" formControlName="property_type" >
+              <label for="Penthouse" class="form-check-label">Penthouse</label>
+            </div>
+        
+        </div>
+      </div>
+  
+      <!-- For Rent Tab -->
+      <div class="tab-pane fade" id="for-plot" role="tabpanel" aria-labelledby="for-plot-tab">
+        <div class="type_container my-3">
+
+          <div class="form-check">
+            <input type="radio"  formControlName="property_type" value="P-residential_plot" id="RP" class="form-check-input">
+            <label for="RP" class="form-check-label">Residential Plot</label>
+          </div>
+          <div class="form-check">
+            <input type="radio"  formControlName="property_type" value="P-commerical_plot" id="CP" class="form-check-input">
+            <label for="CP" class="form-check-label">Commercial Plot</label>
+          </div>
+          <div class="form-check">
+            <input type="radio"  formControlName="property_type" value="P-agricultrual_land" id="AgriculturalLand" class="form-check-input">
+            <label for="AgriculturalLand" class="form-check-label">Agricultural Land</label>
+          </div>
+          <div class="form-check">
+            <input type="radio"  formControlName="property_type" value="P-industrial_land" id="IndustrialLand" class="form-check-input">
+            <label for="IndustrialLand" class="form-check-label">Industrial Land</label>
+          </div>
+          <div class="form-check">
+            <input type="radio"  formControlName="property_type" value="P-plot_file" id="PlotFile" class="form-check-input">
+            <label for="PlotFile" class="form-check-label">Plot File</label>
+          </div>
+          <div class="form-check">
+            <input type="radio"  formControlName="property_type" value="P-plot_form" id="PlotForm" class="form-check-input">
+            <label for="PlotForm" class="form-check-label">Plot Form</label>
+          </div>  
+
+        </div>
+      </div>
+      <!-- for commercial tab -->
+      <div class="tab-pane fade" id="for-commercial" role="tabpanel" aria-labelledby="for-commercial-tab">
+        <div class="type_container my-3">
+          <div class="form-check">
+            <input type="radio"  formControlName="property_type" value="C-office" id="Office" class="form-check-input">
+            <label for="Office" class="form-check-label">Office</label>
+          </div>
+          <div class="form-check">
+            <input type="radio"  formControlName="property_type" value="C-shop" id="Shop" class="form-check-input">
+            <label for="Shop" class="form-check-label">Shop</label>
+          </div>
+          <div class="form-check">
+            <input type="radio"  formControlName="property_type" value="C-warehouse" id="Warehouse" class="form-check-input">
+            <label for="Warehouse" class="form-check-label">Warehouse</label>
+          </div>
+          <div class="form-check">
+            <input type="radio"  formControlName="property_type" value="C-factory" id="Factory" class="form-check-input">
+            <label for="Factory" class="form-check-label">Factory</label>
+          </div>
+          <div class="form-check">
+            <input type="radio"  formControlName="property_type" value="C-building" id="Building" class="form-check-input">
+            <label for="Building" class="form-check-label">Building</label>
+          </div>
+          <div class="form-check">
+            <input type="radio"  formControlName="property_type" value="C-other" id="Other" class="form-check-input">
+            <label for="Other" class="form-check-label">Other</label>
+          </div>
+        </div>
+      </div>
+    </div>
+                        </div>
+                      </div>
+                       
+                      <div class="d-flex ">
+                        <div class="col-12 px-0 px-md-2 px-lg-2">
+                          <div><label for="">City</label></div>
+                          <div>
+                              <select class="p-2 w-100 form-control" formControlName="city">
+                                  <option value="">--Select--</option>
+                                  <option *ngFor="let city of cityList" value="{{city.value}}">{{city.cityName}}</option>     
+                                </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="d-flex ">
+                          <div class="col-12 px-0 px-md-2 px-lg-2">
+                              <div><label for="">Location</label></div>
+                              <div><input type="text" formControlName="location"  class="w-100 p-2 form-control" ></div>
+                          </div>
+                      </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-1 d-none d-md-block d-lg-block"></div>
+          </div>
+          <div class="2nd-section my-4 d-flex">
+            <div class="col-1 d-none d-md-block d-lg-block"></div>
+            <div class="user col-12 col-md-10 col-lg-10  p-4   d-flex">
+                <div class="col-2 d-none d-md-block d-lg-block text-center">
+                  <img src="../assets/02-label.JPG" alt="" class="label-img">
+                  <div class="label p-2">Price and Area</div>
+                </div>
+                <div class="col-12 col-md-10 col-lg-10">
+                  <div class="form container px-lg-4 px-md-3 px-0">
+                    <div class="d-flex ">
+                        <div class="col-12 px-0 px-md-2 px-lg-2 py-2">
+                            <div><label for="">Area Size</label></div>
+                            <div class="d-flex">
+                              <input type="number" formControlName="area_size"  class="w-75 p-2 form-control" >
+                              <div class="area-unit  w-25 ">
+                                <select  class="mx-2 w-100  p-2 form-control" formControlName="area_unit" name="" id="">
+                                  <option value="sqft">Sq. Ft.</option>
+                                  <option value="marla">Marla</option>
+                                  <option value="kanal">Kanal</option>
+                                </select>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex ">
+                      <div class="col-12 px-0 px-md-2 px-lg-2 py-2">
+                          <div><label for="">Price</label></div>
+                          <div><input type="text" formControlName="price"  class="w-100 p-2 form-control"></div>
+                      </div>
+                  </div>
+                  <div class="">
+                    <div class="col-12 px-0 px-md-2 px-lg-2 py-2 d-flex">
+                      <div class="w-100"><label for="" >Installment Available </label></div>
+                      <div class="form-switch">
+                        <input class="form-check-input" type="checkbox" formControlName="installment_status" id="flexSwitchCheckChecked" (change)="installAvail()">
+                      <label class="form-check-label m-0" for="flexSwitchCheckChecked"></label>
+                      </div>
+                    </div>
+                    <div id="installment_box" *ngIf="isIntallAvail" class="">
+                      <div class="d-flex ">
+                        <div class="col-12 px-0 px-md-2 px-lg-2 py-2">
+                            <div><label for="">Advance Amount:</label></div>
+                            <div><input type="number" formControlName="advance"  class="w-100 p-2 form-control"></div>
+                        </div>
+                    </div>
+                    <div class="d-flex ">
+                      <div class="col-12 px-0 px-md-2 px-lg-2 py-2">
+                          <div><label for="">No. of Installments</label></div>
+                          <div><input type="number" formControlName="no_of_installments"  class="w-100 p-2 form-control"></div>
+                      </div>
+                  </div>
+                  <div class="d-flex ">
+                    <div class="col-12 px-0 px-md-2 px-lg-2 py-2">
+                        <div><label for="">Monthly Installment</label></div>
+                        <div><input type="number" formControlName="installment_amount"  class="w-100 p-2 form-control"></div>
+                    </div>
+                </div>
+                    </div>
+                    <div class="col-12 px-0 px-md-2 px-lg-2 py-2 d-flex">
+                      <div class="w-100"><label for="" >Ready for Possession</label></div>
+                      <div>
+                        <div class="form-switch  w-100">
+                          <input class="form-check-input" formControlName="possession_status" type="checkbox" id="flexSwitchCheckChecked">
+                          <label class="form-check-label m-0" for="flexSwitchCheckChecked"></label>
+                          </div>
+                      </div>
+                  </div>
+
+                </div>
+                  </div>
+                </div>
+                <div class="col-1 d-none d-md-block d-lg-block"></div>
+            </div>
+          </div>
+          <div class="3rd-section my-4 d-flex">
+            <div class="col-1 d-none d-md-block d-lg-block"></div>
+            <div class="user col-12 col-md-10 col-lg-10  p-4   d-flex">
+                <div class="col-2 d-none d-md-block d-lg-block text-center">
+                  <img src="../assets/03-label.JPG" alt="" class="label-img">
+                  <div class="label p-2">Feature and Amenities</div>
+                </div>
+                <div class="col-12 col-md-10 col-lg-10">
+                  <div class="form container px-lg-4 px-md-3 px-0">
+                    <div class="py-2">
+                      <label for=""><b> Bed Rooms</b></label>
+                      <div class="label no_of_rooms">
+                        <div class="form-check">
+                          <input type="radio" formControlName="no_of_bedroom"  class="form-check-input" value="1" id="r1">
+                          <label for="r1" class="form-check-label">1 Room</label>
+                        </div>
+                        <div class="form-check">
+                          <input type="radio"  formControlName="no_of_bedroom" class="form-check-input" value="2" id="r2">
+                          <label for="r2" class="form-check-label">2 Rooms</label>
+                        </div>
+                        <div class="form-check">
+                          <input type="radio"  formControlName="no_of_bedroom" class="form-check-input" value="3" id="r3">
+                          <label for="r3" class="form-check-label">3 Rooms</label>
+                        </div>
+                        <div class="form-check">
+                          <input type="radio"  formControlName="no_of_bedroom" class="form-check-input" value="4" id="r4">
+                          <label for="r4" class="form-check-label">4 Rooms</label>
+                        </div>
+                        <div class="form-check">
+                          <input type="radio"  formControlName="no_of_bedroom" class="form-check-input" value="5" id="r5">
+                          <label for="r5" class="form-check-label">5 Rooms</label>
+                        </div>
+                        <div class="form-check">
+                          <input type="radio"  formControlName="no_of_bedroom" id="r6" class="form-check-input" value="6">
+                          <label for="r6" class="form-check-label">6 Rooms</label>
+                        </div>
+                        <div class="form-check">
+                          <input type="radio" formControlName="no_of_bedroom" id="r7" class="form-check-input" value="7">
+                          <label for="r7" class="form-check-label">7 Rooms</label>
+                        </div>
+                        <div class="form-check">
+                          <input type="radio"  formControlName="no_of_bedroom" id="r8" class="form-check-input" value="8">
+                          <label for="r8" class="form-check-label">8 Rooms</label>
+                        </div>
+                        <div class="form-check">
+                          <input type="radio"  formControlName="no_of_bedroom" id="r9" class="form-check-input" value="9">
+                          <label for="r9" class="form-check-label">9 Rooms</label>
+                        </div>
+                        <div class="form-check">
+                          <input type="radio"  formControlName="no_of_bedroom" id="r10" class="form-check-input" value="10">
+                          <label for="r10" class="form-check-label">10 Rooms</label>
+                        </div>
+                        <div class="form-check">
+                          <input type="radio"  formControlName="no_of_bedroom" id="r10+" class="form-check-input" value="10+">
+                          <label for="r10+" class="form-check-label">10+ Rooms</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="py-2">
+                      <label for=""><b> Bath Rooms</b></label>
+                      <div class="label no_of_bath">
+                        <div class="form-check"class="form-check">
+                          <input type="radio" formControlName="no_of_bath" value="1" id="br1" class="form-check-input">
+                          <label for="br1" class="form-check-label">1 Bath Room</label>
+                        </div>
+                        <div class="form-check"> 
+                          <input type="radio" formControlName="no_of_bath" value="2" id="br2" class="form-check-input">
+                          <label for="br2" class="form-check-label">2 Bath Rooms</label>
+                        </div>
+                        <div class="form-check">
+                          <input type="radio" formControlName="no_of_bath" id="br3" value="3" class="form-check-input">
+                          <label for="br3" class="form-check-label">3 Bath Rooms</label>
+                        </div>
+                        <div class="form-check">
+                          <input type="radio" formControlName="no_of_bath" id="br4" value="4" class="form-check-input">
+                          <label for="br4" class="form-check-label">4 Bath Rooms</label>
+                        </div>
+                        <div class="form-check">
+                          <input type="radio" formControlName="no_of_bath" id="br5" value="5" class="form-check-input">
+                          <label for="br5" class="form-check-label">5 Bath Rooms</label>
+                        </div>
+                        <div class="form-check"class="form-check"class="form-check"cl>
+                          <input type="radio" formControlName="no_of_bath" value="5+" id="br5+" class="form-check-input">
+                          <label for="br5+" class="form-check-label">5+ Bath Rooms</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-1 d-none d-md-block d-lg-block"></div>
+            </div>
+          </div>
+          <div class="4th-section my-4 d-flex">
+            <div class="col-1 d-none d-md-block d-lg-block"> </div>
+            <div class="user col-12 col-md-10 col-lg-10  p-4   d-flex">
+                <div class="col-2 d-none d-md-block d-lg-block text-center">
+                  <img src="../assets/04-label.JPG" alt="" class="label-img">
+                  <div class="label p-2">Ad Information</div>
+                </div>
+                <div class="col-12 col-md-10 col-lg-10">
+                  <div class="form container px-lg-4 px-md-3 px-0">
+                    <div class="d-flex ">
+                        <div class="col-12 px-0 px-md-2 px-lg-2 py-2">
+                            <div><label for="">Ads. Title</label></div>
+                            <div class="d-flex">
+                              <input type="text" formControlName="ad_title"  class="w-100 p-2 form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex ">
+                      <div class="col-12 px-0 px-md-2 px-lg-2 py-2">
+                          <div><label for="">Ads. Description</label></div>
+                          <div><textarea formControlName="ad_description" class="w-100 p-2 form-control" ></textarea></div>
+                      </div>
+                  </div>
+                  </div>
+                </div>
+                <div class="col-1 d-none d-md-block d-lg-block"></div>
+            </div>
+          </div>
+          <div class="5th-section my-4 d-flex">
+            <div class="col-1 d-none d-md-block d-lg-block"> </div>
+            <div class="user col-12 col-md-10 col-lg-10  p-4   d-flex">
+                <div class="col-2 d-none d-md-block d-lg-block text-center">
+                  <img src="../assets/05-label.JPG" alt="" class="label-img">
+                  <div class="label p-2">Property Images and Videos</div>
+                </div>
+                <div class="col-12 col-md-10 col-lg-10">
+                  <div class="form container px-lg-4 px-md-3 px-0">
+                    <div class="d-flex ">
+                        <div class="col-12 px-0 px-md-2 px-lg-2 py-2">
+                            <div><label for="">Property Images</label></div>
+                            <div class="d-flex">
+                              <input type="file" formControlName="property_img_path" (change)="onUploadChange($event)" class="form-control w-100 p-2">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex ">
+                      <div class="col-12 px-0 px-md-2 px-lg-2 py-2">
+                          <div><label for="">Add Videos of your Property</label></div>
+                          <div class="add-video my-2">
+                            <div>
+                              <label for="">Video Link</label>
+                            </div>
+                            <div>
+                              <div class="w-100 video-link form-control">
+                                <div class="d-flex">
+                                  <img class="youtube-icon m-2" src="../assets/youtube-logo-removebg-preview.png" alt="">
+                                  <input type="text" formControlName="property_vid1" class="w-100 " placeholder="Add your video link here">
+                                </div>                                      
+                              </div>
+                              <div class="w-100 video-link form-control my-3" *ngIf="addOtherVideo">
+                                <div >
+                                  <div class="d-flex">
+                                    <img class="youtube-icon m-2" src="../assets/youtube-logo-removebg-preview.png" alt="">
+                                    <input type="text" formControlName="property_vid2" class="w-100" placeholder="Add your video link here">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div id="add-video-btn"><button class="btn btn-outline-success p-2 my-2" type="button" (click)="addVideo()" *ngIf="!addOtherVideo">Add Video</button></div>
+                      </div>
+                  </div>
+                  </div>
+                </div>
+                <div class="col-1 d-none d-md-block d-lg-block"></div>
+            </div>
+          </div>
+          <div class="6th-section my-4 d-flex">
+            <div class="col-1 d-none d-md-block d-lg-block"> </div>
+            <div class="user col-12 col-md-10 col-lg-10  p-4   d-flex">
+                <div class="col-2 d-none d-md-block d-lg-block text-center">
+                  <img src="../assets/06-label.JPG" alt="" class="label-img">
+                  <div class="label p-2">Contact Information</div>
+                </div>
+                <div class="col-12 col-md-10 col-lg-10">
+                  <div class="form container px-lg-4 px-md-3 px-0">
+                    <div class="d-flex ">
+                        <div class="col-12 px-0 px-md-2 px-lg-2 py-2">
+                            <div><label for="">Email</label></div>
+                            <div class="d-flex"> 
+                              <input type="email" formControlName="email" class="w-100 p-2 form-control" >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex ">
+                      <div class="col-12 px-0 px-md-2 px-lg-2 py-2">
+                          <div><label for="">Phone</label></div>
+                          <div class="d-flex">
+                            <input type="number" formControlName="phone" class="w-100 p-2 form-control">
+                          </div>
+                      </div>
+                  </div>
+                  <div class="d-flex ">
+                    <div class="col-12 px-0 px-md-2 px-lg-2 py-2">
+                        <div><label for="">Landline</label></div>
+                        <div class="d-flex">
+                          <input type="number" formControlName="landline" class="w-100 p-2 form-control">
+                        </div>
+                    </div>
+                </div>
+                  </div>
+                  </div>
+                </div>
+                <div class="col-1 d-none d-md-block d-lg-block"></div>
+                
+              </div>
+              <div class="col-10 container ">
+                <button class="text-center btn btn-outline-primary listing_submit px-4" (click)="postListing()">Submit</button>
+              </div>
+        </form>
+    

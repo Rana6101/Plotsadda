@@ -1,0 +1,37 @@
+import { Component } from '@angular/core';
+import { AuthServiceService } from '../services/auth-service.service';
+import {  Router } from '@angular/router';
+import { HomeComponent } from '../home/home.component';
+
+@Component({
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.css']
+})
+export class HeaderComponent {
+  routeData:any;
+  loginStatus:any=false;
+  LoginData:any;
+  constructor(private _service:AuthServiceService, private _router:Router){  
+     console.log(this._service.isLoggedIn())
+     this.loginStatus = this._service.isLoggedIn()
+     this.LoginData = this._service.loginUser.value
+     this.LoginData = JSON.parse(this.LoginData)
+     console.log('login user', this.LoginData)  
+    }
+
+  sign_out(){
+    this._service.logoutUser()
+    this.loginStatus = this._service.isLoggedIn;
+    console.log('status',this.loginStatus)
+    // this._router.navigateByUrl('/home')
+  }
+  agent(){
+    this._service.isAgent.next(true)
+  }
+  nonAgent(){
+    this._service.isAgent.next(false)
+  }
+
+
+}

@@ -1,0 +1,79 @@
+<header>
+    <div class="main">
+        <div class="d-flex">
+            <div class="col-5 first_nav">
+                <nav class="navbar">
+                    <ul class="nav  me-auto">
+                        <li class="nav-item mx-3">
+                            <a (click)="nonAgent()" routerLink='./home' class="nav-link">
+                                <span> Home</span>
+                            </a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a (click)="nonAgent()" routerLink='./buy' class="nav-link">
+                                <span>Buy</span>
+                            </a>
+                        </li>
+                        <li (click)="nonAgent()" class="nav-item mx-2">
+                            <a routerLink='./sell' class="nav-link">
+                                <span>Sell</span>
+                            </a>
+                        </li>
+                        <li (click)="nonAgent()" class="nav-item ms-2">
+                            <a routerLink='./rent' class="nav-link">
+                                <span>Rent</span>
+                            </a>
+                        </li>
+                        <li (click)="nonAgent()" class="nav-item mx-2">
+                            <a routerLink='./commercial' class="nav-link">
+                                <span>Commercial</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </nav>
+            </div>
+            <div class="col-2">
+                <div class="logo">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a (click)="nonAgent()" routerLink="" class="nav-link logo_img">
+                                <img class="nav-logo" src="../../assets/site-logo.png" alt="PlotsAdda.com">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-5 second_nav">
+                <nav class="navbar">
+                    <ul class="nav  me-auto">
+                        <li class="nav-item mx-2">
+                            <a (click)="agent()" routerLink='./agent' class="nav-link">
+                                <span>Agent</span>
+                            </a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a (click)="nonAgent()" routerLink='./advertise' class="nav-link">
+                                <span>Advertise</span>
+                            </a>
+                        </li>
+                        <li class="nav-item mx-2 px-2">
+                            <button class=" btn btn-light" *ngIf="!loginStatus" routerLink="login">Login</button>
+                            <div class="dropdown mx-2" id="profile_box" *ngIf="loginStatus">
+                                <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                                  <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                                  <strong>{{LoginData.name}}</strong>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+                                  <li><a class="dropdown-item" routerLink="/dashboard">My Account</a></li>
+                                  <li><a class="dropdown-item" routerLink="/dashboard/setting">Setting</a></li>
+                                  <li><a class="dropdown-item" (click)="sign_out()">Sign out</a></li>
+                                </ul>
+                              </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,43 @@
+<div class="main">
+    <div class="container my-4">
+        <div *ngIf="blogDetail">
+            <div class="blog_img_container">
+                <img class="blog_img" src="{{blogDetail.blog_pic_file}}" alt="">
+                <div class="img_title">
+                    <h3 class="text-light">{{ blogDetail.blog_title }}</h3>
+                    <p class="post_info">
+                        4 MIN READ | {{blogDetail.user_name}} | {{blogDetail.createdAt|date }}
+                    </p>
+                </div>
+            </div>
+            <div class="blog_detail d-flex">
+                <div class="blog_description col-10 col-md-8 col-lg-9">
+                    <p>{{ blogDetail.blog_des }}</p> 
+                </div>
+                <div class="col-lg-3 col-md-4 col-10 m-4 side_box">
+                    <div>
+                      <div class="instaTitle w-100 text-center text-light p-2">INSTAGRAM</div>
+                      <div class="text-center m-4"> <button class="btn btn-dark">
+                        <b>Follow me</b></button></div>
+                      <div class="newsLetter   p-2">
+                        <div class="img text-center p-3">
+                          <img src="./assets/envelop-removebg-preview.png" class="w-50" alt="">
+                        </div>
+                        <div class="title text-center">NEWSLETTER</div>
+                        <p class="text-center py-2">Subscribe for Daily Blog Alert</p>
+                        <form action="" >
+                          <input class="form-control w-100 my-2 p-2" type="email" placeholder="Email">
+                          <input class="form-control w-100 my-2 p-2" type="text" placeholder="Name">
+                          <button class="btn btn-dark w-100 my-2">SUBSCRIBE</button>
+                        </form>
+        
+        
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

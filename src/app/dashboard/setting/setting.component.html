@@ -1,0 +1,84 @@
+<div id="setting" class="setting col-12 " >
+    <div class="container_fluid">
+       <div class="1st-section my-4 d-flex">
+           <div class="col-1"></div>
+           <div class="user col-10  container_fluid px-4 py-2   d-flex">
+               <div class="col-3 col-md-2 col-lg-1">
+                   <img class="user-profile-pic " src="../assets/profile-logo.png" alt="">
+               </div>
+               <div class="col-9 col-md-10 col-lg-11">
+                   <h4>User Name</h4>
+                   <p>user&#64;email.com</p>
+               </div>
+           </div>
+           <div class="col-1"></div>
+       </div>
+       <div class="2nd-section my-4 d-flex">
+           <div class="col-1"></div>
+           <div class="user col-10 container p-4   d-flex">
+               <div class="col-12">
+                   <p>Additional Infomation</p>
+                   <div class="form container p-0 px-md-4 px-lg-4">
+                       <form action="">
+                           <div class="d-block d-md-flex d-lg-flex">
+                               <div class="col-12 col-md-6 col-lg-6 px-1 px-md-4 px-lg-4">
+                                   <div><label for="">Name</label></div>
+                                   <div><input type="text" value="{{userData.name}}" class="w-100 p-2 form-control"></div>
+                               </div>
+                               <div class="col-12 col-md-6 col-lg-6 px-1 px-md-4 px-lg-4">
+                                   <div><label for="">Email</label></div>
+                                   <div><input type="email" disabled value="{{userData.email}}" class="w-100 p-2 form-control"></div>
+                               </div>
+
+                           </div>
+                           <div class="d-block d-md-flex d-lg-flex">
+                               <div class="col-12 col-md-6 col-lg-6 px-1 px-md-4 px-lg-4">
+                                   <div><label for="">Mobile</label></div>
+                                   <div><input type="number" placeholder="03xx-xxxxxxx" value="{{userData.phone}}" class="w-100 p-2 form-control"></div>
+                               </div>
+                               <div class="col-12 col-md-6 col-lg-6 px-1 px-md-4 px-lg-4">
+                                   <div><label for="">Landline</label></div>
+                                   <div><input type="number" placeholder="042xx-xxxxxxx" value="{{userData.landline}}" class="w-100 p-2 form-control"></div>
+                               </div>
+
+                           </div>
+                           <div class="d-block d-md-flex d-lg-flex">
+                               <div class="col-12 col-md-6 col-lg-6 px-1 px-md-4 px-lg-4">
+                                   <div><label for="">Whatsapp</label></div>
+                                   <div><input type="number" placeholder="03xx-xxxxxxx" value="{{userData.phone}}" class="w-100 p-2 form-control"></div>
+                               </div>
+                               <div class="col-12 col-md-6 col-lg-6 px-1 px-md-4 px-lg-4">
+                                   <div><label for="">City</label></div>
+                                   <div>
+                                       <select class="p-2 w-100 form-control" [value]="userData.city">
+                                           <option value="">--Select--</option>
+                                            <option *ngFor="let city of cityList" value="{{city.value}}">	{{city.cityName}}	</option>
+                                        </select>
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="d-flex ">
+                               <div class="col-12 px-1 px-md-4 px-lg-4">
+                                   <div><label for="">Address</label></div>
+                                   <div><input type="text" value="{{userData.address}}"  class="w-100 p-2 form-control"></div>
+                               </div>
+                           </div>
+                           <div class="d-flex">
+                               <div class="col-12 px-1 px-md-4 px-lg-4">
+                                   <div><label for="">Upload a Picture</label></div>
+                                   <div><input type="file"  class="w-100 form-control   p-2"></div>
+                               </div>
+                           </div>
+                           <div class="submit m-4 text-center" >
+                               <button class="btn btn-primary px-4 py-2 ">Save Changes</button>
+                           </div>
+
+                       </form>
+                   </div>
+               </div>
+           </div>
+           <div class="col-1"></div>
+
+       </div>
+    </div>
+   </div>

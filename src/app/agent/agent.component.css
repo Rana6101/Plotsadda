@@ -1,0 +1,86 @@
+.banner{
+    height: 500px;
+    background: url('../../assets/agent.png');
+    /* background: url('../../assets/real_estate_isometric_illustration-06.jpg'); */
+    background-repeat: round;
+}
+.main{
+    background: #F9F9FB;
+}
+.card{
+    background: #ffffff;
+    box-shadow: 3px 3px rgba(53, 53, 53, 0.163); 
+}
+.card:hover{
+    background: #d8f1ff;
+    box-shadow: 7px 7px rgba(123, 134, 137, 0.312); 
+}
+.card img{
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+}.teamBadge{
+    background: rgba(255, 255, 95, 0.734); 
+    border-radius: 40px;
+}
+.agent-list{
+    display: grid;
+    grid-column: auto auto;
+    grid-template-columns: auto auto ;
+}
+
+.finding_agent{
+    height: 400px;
+    background: url('../../assets/agent_section.jpg');
+    background-repeat: round;
+}
+.section_txt{
+    padding-top:100px ;
+}
+.faq{
+    background: #313F51;
+    padding: 30px;
+}
+.faq h1{
+    text-decoration: underline;
+}
+.accordion{
+    background: #313F51;
+    --bs-accordion-bg: #313f51;
+    --bs-accordion-active-bg: #313f51;  
+    --bs-accordion-color: #fafafa;
+    --bs-accordion-active-color: #fafafa;
+    --bs-accordion-btn-color:#fafafa;
+    --bs-accordion-border-width:3px;
+    --bs-accordion-btn-focus-box-shadow:none;
+    --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e")
+}
+.accordion-body{
+    padding-left: 0px;
+}
+.accordion-button{
+    font-weight: bolder;
+}
+video{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+.accordion-flush>.accordion-item>.accordion-header .accordion-button, .accordion-flush>.accordion-item>.accordion-header .accordion-button.collapsed{
+    padding-left: 0;
+}
+
+
+
+@media only screen and (min-width: 600px) and (max-width:1024px) {
+
+    .banner{
+        height: 350px;
+    }
+}
+@media only screen and (max-width: 600px) {
+
+    .banner{
+        height: 250px;
+    }
+}

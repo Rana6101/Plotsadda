@@ -1,0 +1,78 @@
+
+<swiper-container navigation="true" slides-per-view="3.5">
+    <swiper-slide *ngFor="let project of projectList">
+        <div class="card1 mx-2" (click)="viewProject(project._id)"  data-aos="flip-right" data-aos-duration="2000">
+            <div class="img-holder">
+              <span *ngIf="project.mark_as_hot" class="px-2 bg-danger text-light hot">HOT</span>
+              <img src="{{project.project_pic_file}}" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body">
+              <div class="title price-range">{{project.project_cost}}</div>
+              <div class="title location">{{project.project_title}}</div>
+              <p class="text-muted location-info">{{project.project_location}}</p>
+              <div class="title property-type">{{project.project_type}}</div>
+              <div class="title area-range">{{project.project_area}}</div>
+          </div>
+          </div>
+    </swiper-slide>
+    <swiper-slide>
+        <div class="card1 mx-2"  data-aos="flip-right" data-aos-duration="2000">
+            <div class="img-holder">
+              <span class="px-2 bg-danger text-light hot">HOT</span>
+              <img src="../../assets/1.jpeg" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body">
+              <div class="title price-range">PKR 83.7 Lakh to 2.81 Crore 2</div>
+              <div class="title location">Peral Square Residency, Islamabad</div>
+              <p class="text-muted location-info">Islamabad, Bahria Town</p>
+              <div class="title property-type">Flat, Penthouse</div>
+              <div class="title area-range">620 sqft to 1759 sqft</div>
+          </div>
+          </div>
+    </swiper-slide>
+    <swiper-slide>
+        <div class="card1 mx-2"  data-aos="flip-right" data-aos-duration="2000">
+            <div class="img-holder">
+              <span class="px-2 bg-danger text-light hot">HOT</span>
+              <img src="../../assets/3.jpeg" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body">
+              <div class="title price-range">PKR 83.7 Lakh to 2.81 Crore 3</div>
+              <div class="title location">Peral Square Residency, Islamabad</div>
+              <p class="text-muted location-info">Islamabad, Bahria Town</p>
+              <div class="title property-type">Flat, Penthouse</div>
+              <div class="title area-range">620 sqft to 1759 sqft</div>
+          </div>
+          </div>
+    </swiper-slide>
+    <swiper-slide>
+        <div class="card1 mx-2"  data-aos="flip-right" data-aos-duration="2000">
+            <div class="img-holder">
+              <span class="px-2 bg-danger text-light hot">HOT</span>
+              <img src="../../assets/Sell_home.png" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body">
+              <div class="title price-range">PKR 83.7 Lakh to 2.81 Crore 4</div>
+              <div class="title location">Peral Square Residency, Islamabad</div>
+              <p class="text-muted location-info">Islamabad, Bahria Town</p>
+              <div class="title property-type">Flat, Penthouse</div>
+              <div class="title area-range">620 sqft to 1759 sqft</div>
+          </div>
+          </div>
+    </swiper-slide>
+    <swiper-slide>
+        <div class="card1 mx-2"  data-aos="flip-right" data-aos-duration="2000">
+            <div class="img-holder">
+              <span class="px-2 bg-danger text-light hot">HOT</span>
+              <img src="../../assets/Untitled-design-9.jpg" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body">
+              <div class="title price-range">PKR 83.7 Lakh to 2.81 Crore 5</div>
+              <div class="title location">Peral Square Residency, Islamabad</div>
+              <p class="text-muted location-info">Islamabad, Bahria Town</p>
+              <div class="title property-type">Flat, Penthouse</div>
+              <div class="title area-range">620 sqft to 1759 sqft</div>
+          </div>
+          </div>
+    </swiper-slide>
+</swiper-container>

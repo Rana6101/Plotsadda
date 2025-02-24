@@ -1,0 +1,46 @@
+<div  class="blog-posting col-12">
+    <div class="container">
+      <div class="main-section  my-4 d-flex">
+        <div class="col-1"> </div>
+        <div class="user col-10  p-4   d-flex">
+            <div class="col-2 d-none d-md-block d-lg-block text-center">
+              <img src="../assets/04-label.JPG" alt="" class="label-img">
+              <div class="label p-2">Add New Blog</div>
+            </div>
+            <div class="col-12 col-md-10 col-lg-10">
+              <form [formGroup]="blogForm">
+              <div class=" container px-1 px-md-4 px-lg-4">
+                <div class="d-flex ">
+                    <div class="col-12 p-0 px-md-4 px-lg-4 py-md-2 py-lg-2 ">
+                        <div><label for="">Title</label></div>
+                        <div class="d-flex">
+                          <input type="text" formControlName="blog_title" class="w-100 p-2 form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex ">
+                  <div class="col-12 p-0 px-md-4 px-lg-4 py-md-2 py-lg-2">
+                      <div><label for="">Feature Image</label></div>
+                      <div class="d-flex">
+                        <input type="file" (change)="onUploadChange($event)" accept=".png, .jpg, .jpeg, .pdf" formControlName="blog_pic" class="form-control w-100 p-2">
+                      </div>
+                  </div>
+              </div>
+                <div class="d-flex ">
+                  <div class="col-12 p-0 px-md-4 px-lg-4 py-md-2 py-lg-2">
+                      <div><label for="">Description</label></div>
+                      <div><textarea name="" formControlName="blog_des" class="w-100 p-2 form-control" id=""></textarea></div>
+                  </div>
+              </div>
+              <div class="px-4">
+
+                <button class="btn w-100 btn-primary p-2" (click)="addBlog()">Upload</button>
+              </div>
+            </div>
+          </form>
+            </div>
+            <div class="col-1"></div>
+        </div>
+      </div>
+    </div>
+  </div>

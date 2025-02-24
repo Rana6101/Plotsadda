@@ -1,0 +1,84 @@
+<div class="main-section">
+    <div class="banner text-center">
+    </div>
+    <div class="wrapper">
+      <div class="container">
+        <div class="d-lg-flex d-md-flex d-block">
+          <div class="col-lg-9 col-md-8 col-12 blogs-section      ">
+            <div class="card m-4" *ngFor="let blog of blog_list" (click)="viewBlog(blog._id)" >
+              <img class="card-img-top" src="{{blog.blog_pic_file}}" alt="Card image cap">
+              <div class="card-body">
+                <h3 class="card-title text-center">{{blog.blog_title}}</h3>
+                <p class="post_info">
+                  Published by | {{blog.user_name}} | {{blog.createdAt | date}}
+                </p>
+                <p class="card-text">{{blog.blog_des}}</p>
+              </div>
+            </div>
+            <div class="card m-4" >
+              <img class="card-img-top" src="./assets/1.jpeg" alt="Card image cap">
+              <div class="card-body">
+                <h3 class="card-title text-center">Card title</h3>
+                <p class="post_info">
+                  4 MIN READ | NAME OF OWNER OR AGENT | DATE
+                </p>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+            <div class="card m-4" >
+              <img class="card-img-top" src="./assets/1.jpeg" alt="Card image cap">
+              <div class="card-body">
+                <h3 class="card-title text-center">Card title</h3>
+                <p class="post_info">
+                  4 MIN READ | NAME OF OWNER OR AGENT | DATE
+                </p>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+            <div class="card m-4" >
+              <img class="card-img-top" src="./assets/1.jpeg" alt="Card image cap">
+              <div class="card-body">
+                <h3 class="card-title text-center">Card title</h3>
+                <p class="post_info">
+                  4 MIN READ | NAME OF OWNER OR AGENT | DATE
+                </p>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+            <div class="card m-4" >
+              <img class="card-img-top" src="./assets/1.jpeg" alt="Card image cap">
+              <div class="card-body">
+                <h3 class="card-title text-center">Card title</h3>
+                <p class="post_info">
+                  4 MIN READ | NAME OF OWNER OR AGENT | DATE
+                </p>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+            
+          </div>
+          <div class="col-lg-3 col-md-4 col-10 m-4">
+            <div>
+              <div class="instaTitle w-100 text-center text-light p-2">INSTAGRAM</div>
+              <div class="text-center m-4"> <button class="btn btn-dark">
+                <b>Follow me</b></button></div>
+              <div class="newsLetter   p-2">
+                <div class="img text-center p-3">
+                  <img src="./assets/envelop-removebg-preview.png" class="w-50" alt="">
+                </div>
+                <div class="title text-center">NEWSLETTER</div>
+                <p class="text-center py-2">Subscribe for Daily Blog Alert</p>
+                <form action="" >
+                  <input class="input feild w-100 my-2 p-2" type="email" placeholder="Email">
+                  <input class="input feild w-100 my-2 p-2" type="text" placeholder="Name">
+                  <button class="btn btn-dark w-100 my-2">SUBSCRIBE</button>
+                </form>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

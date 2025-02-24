@@ -1,0 +1,319 @@
+<div class="main">
+    <div class="section1">
+        <div class="section search first position-relative ">
+            <div id="carouselExampleAutoplaying" class="background-layer carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active" >
+                  <img src="./assets/normal_lp.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="./assets/normal_lp1.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="./assets/normal_lp2.jpg" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+        
+            <div class="search-wrapper d-block position-absolute top-50 start-50 translate-middle text-center">
+              <div class="search-heading">
+                <h2 class="text-light text-center">
+                  Search properties for sale & buying in Pakistan
+                </h2>
+              </div>
+              <div class="search-btn text-center">
+                <button type="button" class="btn btn-light mx-3 my-2">
+                  <a class="text-dark" routerLink="/buy" style="text-decoration: none;">BUY</a>
+                </button>
+                         <button type="button" class="btn btn-outline-light mx-3 my-2"><a class="search-btn-a" routerLink="/sell"> SELL</a></button>
+                <button type="button" class="btn btn-outline-light mx-3 my-2"> <a class="search-btn-a " routerLink="/rent"> RENT</a></button>
+              </div>
+              <form action="" class="search_form">
+                <div class="search-bar-section  d-lg-flex d-none ">
+                    <div class=" col-3 m-2 mx-4">
+                        <div class="input-group mb-3"  >
+                            <label class="input-group-text" for="citySelect">City</label>
+                            <select class="form-select" id="citySelect" >
+                                <option value="">--Select--</option>
+                                <option *ngFor="let city of cityList" value="{{city.value}}">{{city.cityName}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-8 my-2">
+                        <div class="input-group mb-3">
+                            <label class="input-group-text" for="locationInput">Location</label>
+                            <input type="text" class="form-control" id="locationInput" placeholder="" value="">
+                            <button class="btn btn-success" type="button" id="button-addon2" routerLink="/buy">FIND</button>
+                        </div>    
+                    </div>    
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="d-block d-md-flex d-lg-flex section-two gap-3" >
+          <div class="txt col-md-6 col-lg-6 col-12" data-aos="fade-right" data-aos-offset="300"
+          data-aos-easing="ease-in-sine">
+            <h4>Get home recommendations</h4>
+            <p>Sign in for a more personalized experience.</p>
+            <button class="btn btn-success"   routerLink="/login">Click Here to Sign in</button>
+          </div>
+          <div class="img-container col-md-6 col-lg-6 col-12" data-aos="fade-left" data-aos-offset="300"
+          data-aos-easing="ease-in-sine">
+            <img src="assets/home-1st-section.jpg" class="image w-100" alt="Home section image">
+          </div>       
+        </div>
+    </div>
+    <div class="card-container-main" >
+        <div class="container card-container d-block d-lg-flex d-md-flex">
+          <div class="card1 col-12 col-md-4 col-lg-4 p-4" data-aos="zoom-out" data-aos-duration="2000">
+            <div class="card text-center card-hover"  >
+              <img src="assets/homepage-spot-agent-lg-1.webp" class="w-50 align-center" alt="Home Image">
+              <div class="card-title">
+                <h3>
+                  <b>Buy a home</b>
+                </h3>
+              </div>
+              <p class="card-content px-2">
+                Find your place with an immersive photo experience and the most listings, including things you won't find anywhere else.
+              </p>
+              <div class="card-actions">
+                <a routerLink="/buy">
+                  <button class="btn btn-outline-success">Browse homes</button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="card1 col-12 col-md-4 col-lg-4 p-4" data-aos="zoom-out" data-aos-duration="2000">
+            <div class="card text-center card-hover">
+              <img src="assets/homepage-spot-sell-lg-1.webp" class="w-50 align-center" alt="Sell a home">
+              <div class="card-title">
+                <h3>
+                  <b>Sell a home</b>
+                </h3>
+                <p class="card-content px-2">No matter what path you take to sell your home, we can help you navigate a successful sale. Its very good to sale here.</p>
+                <div class="card-actions">
+                  <a routerLink="/sell">
+                    <button class="btn btn-outline-success">See your options</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card1 col-12 col-md-4 col-lg-4 p-4" data-aos="zoom-out" data-aos-duration="2000">
+            <div class="card  text-center card-hover">
+              <img src="assets/homepage-spot-rent-lg-1.webp" class="w-50 align-center" style="width: 50%;">
+              <div class="card-title">
+                <h3>
+                  <b>Rent a home</b>
+                </h3>
+              </div>
+              <p class="card-content px-2">We’re creating a seamless online experience – from shopping on the largest rental network, to applying, to paying rent.</p>
+              <div class="card-actions">
+                <a routerLink="/rent">
+                  <button class="btn btn-outline-success">Find rentals</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="container my-4">
+        <div class="project_wrapper">
+          <div class="proHeading p-4 ">
+            <h4>
+              Projects We are in
+              <span class="bg-danger p-2 px-3 trending">
+                Trending
+              </span>
+            </h4>
+          </div>
+          <div class="slider">
+            <!-- Swiper Container -->
+            <app-swiper></app-swiper>
+          </div>
+
+
+        </div>
+      </div>
+
+      
+
+<div class="container my-2"><div class="container my-2">
+    <h4 class="my-2">
+      <span class="location_heading rounded p-2 fw-bold fs-3">Most Popular Locations in Pakistan</span>
+    </h4>
+    
+    <!-- Tabs Navigation -->
+    <ul class="nav nav-tabs custom-tabs" id="locationTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="for-sale-tab" data-bs-toggle="tab" data-bs-target="#for-sale" type="button" role="tab" aria-controls="for-sale" aria-selected="true">For Sale</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="for-rent-tab" data-bs-toggle="tab" data-bs-target="#for-rent" type="button" role="tab" aria-controls="for-rent" aria-selected="false">For Rent</button>
+      </li>
+    </ul>
+  
+    <!-- Tabs Content -->
+    <div class="tab-content" id="locationTabsContent">
+      <!-- For Sale Tab -->
+      <div class="tab-pane fade show active" id="for-sale" role="tabpanel" aria-labelledby="for-sale-tab">
+        <div class="city_container my-3">
+          <a class="text-dark"><div class="item"> <span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span> Lahore</div></a>
+       <a class="text-dark"> <div class="item"> <span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span> Islamabad</div></a>
+        <a class="text-dark"><div class="item"> <span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span> Faisalabad</div></a>
+       <a class="text-dark"> <div class="item"> <span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span> Rawalpindi</div></a>
+        <a class="text-dark"><div class="item"> <span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span> Multan</div></a>
+       <a class="text-dark"> <div class="item"> <span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span> Gujranwala</div></a>
+        <a class="text-dark"><div class="item"> <span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span> Sialkot</div></a>
+        <a class="text-dark"><div class="item"> <span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span> Sargodha</div></a>
+        <a class="text-dark"><div class="item"> <span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span> Bahawalpur</div></a>
+        <a class="text-dark"><div class="item"> <span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Sheikhupura</div></a>
+        <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span> Jhelum</div></a>
+        <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Okara</div></a>
+        <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Rahim Yar Khan</div></a>
+        <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Gujrat</div></a>
+        <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Kasur</div></a>
+        <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Mianwali</div></a>
+        <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Hafizabad</div></a>
+        <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Muzaffargarh</div></a>
+        <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Chiniot</div></a>
+        <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Karachi</div></a>
+        <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Larkana</div></a>
+       <a class="text-dark"> <div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Hyderabad</div></a>
+        <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Mirpur Khas</div></a>
+       <a class="text-dark"> <div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Peshawar</div></a>
+       <a class="text-dark"> <div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Umerkot</div></a>
+       <a class="text-dark"> <div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Mardan</div></a>
+       <a class="text-dark"> <div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Abbottabad</div></a>
+      <a class="text-dark">  <div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Quetta</div></a>
+       <a class="text-dark"> <div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Gwadar</div></a>
+        <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Chaman</div></a>
+        <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Gilgit</div></a>
+        <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Skardu</div></a>
+        <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Hunza</div></a>
+        <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Muzaffarabad</div></a>
+       <a class="text-dark"> <div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Mirpur</div></a>
+       <a class="text-dark"> <div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Bagh</div></a>
+       <a class="text-dark"> <div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Rawalakot</div></a>
+       <a class="text-dark"> <div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Neelum</div></a>
+  
+     
+          <!-- Add more cities as needed -->
+        </div>
+      </div>
+  
+      <!-- For Rent Tab -->
+      <div class="tab-pane fade" id="for-rent" role="tabpanel" aria-labelledby="for-rent-tab">
+        <div class="city_container my-3">
+          <a class="text-dark"><div class="item"> <span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span> Lahore</div></a>
+          <a class="text-dark"> <div class="item"> <span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span> Islamabad</div></a>
+           <a class="text-dark"><div class="item"> <span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span> Faisalabad</div></a>
+          <a class="text-dark"> <div class="item"> <span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span> Rawalpindi</div></a>
+           <a class="text-dark"><div class="item"> <span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span> Multan</div></a>
+          <a class="text-dark"> <div class="item"> <span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span> Gujranwala</div></a>
+           <a class="text-dark"><div class="item"> <span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span> Sialkot</div></a>
+           <a class="text-dark"><div class="item"> <span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span> Sargodha</div></a>
+           <a class="text-dark"><div class="item"> <span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span> Bahawalpur</div></a>
+           <a class="text-dark"><div class="item"> <span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Sheikhupura</div></a>
+           <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span> Jhelum</div></a>
+           <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Okara</div></a>
+           <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Rahim Yar Khan</div></a>
+           <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Gujrat</div></a>
+           <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Kasur</div></a>
+           <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Mianwali</div></a>
+           <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Hafizabad</div></a>
+           <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Muzaffargarh</div></a>
+           <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Chiniot</div></a>
+           <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Karachi</div></a>
+           <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Larkana</div></a>
+          <a class="text-dark"> <div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Hyderabad</div></a>
+           <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Mirpur Khas</div></a>
+          <a class="text-dark"> <div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Peshawar</div></a>
+          <a class="text-dark"> <div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Umerkot</div></a>
+          <a class="text-dark"> <div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Mardan</div></a>
+          <a class="text-dark"> <div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Abbottabad</div></a>
+         <a class="text-dark">  <div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Quetta</div></a>
+          <a class="text-dark"> <div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Gwadar</div></a>
+           <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Chaman</div></a>
+           <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Gilgit</div></a>
+           <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Skardu</div></a>
+           <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Hunza</div></a>
+           <a class="text-dark"><div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Muzaffarabad</div></a>
+          <a class="text-dark"> <div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Mirpur</div></a>
+          <a class="text-dark"> <div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Bagh</div></a>
+          <a class="text-dark"> <div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Rawalakot</div></a>
+          <a class="text-dark"> <div class="item"><span><img src="./assets/city_arrows.png" alt="" class="city_arrow"></span>Neelum</div></a>
+    
+     
+          <!-- Add more cities as needed -->
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- <div id="testimonialCarousel" class="carousel slide" data-bs-touch="false" data-aos="fade-up">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="about-section text-center container" data-aos-duration="3000">
+          <h4 class="mb-4" style="color: #28a745;">About PlotsAdda's Recommendations</h4>
+          <div class="testimonial-content">
+            <img src="./assets/normal_lp.png" alt="Reviewer image" class="reviewer-image rounded-circle mb-3" style="width: 100px; height: 100px;">
+            <p class="fw-bold">Nafees</p>
+            <p class="review" style="text-align: center;">
+              "PlotsAdda helped me find the perfect home based on my needs and preferences. I highly recommend it!"
+            </p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="carousel-item">
+        <div class="about-section text-center container" data-aos-duration="3000">
+          <h4 class="mb-4" style="color: #28a745;">About PlotsAdda's Recommendations</h4>
+          <div class="testimonial-content">
+            <img src="./assets/normal_lp.png" alt="Reviewer image" class="reviewer-image rounded-circle mb-3" style="width: 100px; height: 100px;">
+            <p class="fw-bold">Hadi</p>
+            <p class="review" style="text-align: center;">
+              "The recommendation feature was spot on. I found several homes that I would have missed otherwise!"
+            </p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="carousel-item">
+        <div class="about-section text-center container" data-aos-duration="3000">
+          <h4 class="mb-4" style="color: #28a745;">About PlotsAdda's Recommendations</h4>
+          <div class="testimonial-content">
+            <img src="./assets/normal_lp.png" alt="Reviewer image" class="reviewer-image rounded-circle mb-3" style="width: 100px; height: 100px;">
+            <p class="fw-bold">Ali</p>
+            <p class="review" style="text-align: center;">
+              "Thanks to PlotsAdda, I could make a well-informed decision and find my dream home effortlessly!"
+            </p>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  
+    <!-- Carousel controls -->
+
+    <!-- <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div> -->
+
+</div>

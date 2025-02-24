@@ -1,0 +1,19 @@
+
+
+.sidebar-narrow-unfoldable{
+    top: 65px;
+}
+.sidebar{
+    height: 90vh;
+    --cui-sidebar-brand-color: #fafafa;
+    --cui-sidebar-nav-link-color: #fafafa;
+    --cui-sidebar-nav-link-icon-color:#fafafa;
+    --cui-sidebar-nav-group-toggle-show-color:#fafafa;
+    --cui-body-color:#fafafa;
+    --cui-sidebar-nav-title-color:#fafafa;
+    --cui-tertiary-color: #fafafa;
+    --bs-body-color:#fafafa;
+}
+.side-icon{
+    width: 40px;
+}

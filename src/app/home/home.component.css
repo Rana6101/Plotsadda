@@ -1,0 +1,153 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+.search-wrapper{
+    margin: auto;
+    width: 70%;
+    background-color: rgba(46, 46, 46, 0.507);
+  }
+  .search-wrapper:hover{
+    background-color: rgba(12, 12, 12, 0.507);
+  }
+  .search-container {
+    height: 100vh; /* Ensure it takes the full screen height */
+    overflow: hidden;
+  }
+  .carousel-item img {
+    object-fit: cover;
+    height: 80vh; /* Full height of viewport */
+  }
+  .search {
+    z-index: 1; /* Ensures the search content is above the background */
+    color: white; /* Change text color to stand out against the background */
+  }
+  
+  .search-btn button{
+    width: 150px;
+  }
+  .search-btn button a{
+    padding: 4px 40px;
+    color: #fafafa;
+    text-decoration: none;
+  }
+  .search-btn button a:hover{
+    color: black;
+  }
+  .search-bar-section label{
+    width: 20%;
+  }
+  .search-bar-section select{
+    width: 78%;
+    height: 38px;
+  }
+  .search-bar-section input{
+    height: 38px;
+  }
+  .searchInput{
+    border-radius: 10px;
+  }
+  .search-bar-section button{
+    border-radius: 0;
+    background-color: rgb(18, 101, 18);
+  }
+  .section-two{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    justify-content: center;
+  }
+  .section-two button {
+    background: rgb(18, 101, 18);
+  }
+  .section-two .txt{
+    margin: auto;
+  }
+  .carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgb(39, 39, 39); /* Changes the arrow icon color to black */
+  border-radius: 50%; /* Optional: makes the icons round */
+  width: 40px; /* Optional: adjust size */
+  height: 40px;
+}
+.card{
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+border-radius: 50px;
+}
+.card-content{
+  text-align: center;
+}
+.card-hover:hover {
+  cursor: pointer;
+  border-color:#13A137; /* Change the border color on hover */
+  box-shadow: 0 4px 15px rgba(8, 153, 64, 0.5); /* Optional shadow effect on hover */
+}
+.card-container-main{
+  background: #EAF3FD;
+}
+.card-container img{
+    align-items: center;
+    margin: 25px auto;   
+}
+.card1 button{
+    margin: 25px;
+}
+.project_wrapper{
+    background: #EAF3FD;
+    border-radius: 20px;
+    
+  }
+  .trending{
+    font-size: 16px;
+    color: #fafafa;
+    border-radius: 25px;
+  }
+.slider{
+  padding: 35px;
+}
+    /* Custom styling for tabs */
+    .custom-tabs .nav-link {
+        color: black; /* Unselected tab color */
+        font-weight: 500;
+        border: none; /* Remove border */
+        border-bottom: 2px solid transparent; /* Hide bottom border by default */
+      }
+      
+      /* Style for the active tab */
+      .custom-tabs .nav-link.active {
+        color: #28a745; /* Green color for selected tab */
+        border-bottom: 3px solid #28a745; /* Green underline for selected tab */
+        font-weight: bold;
+      }
+    
+      /* Hover effect */
+      .custom-tabs .nav-link:hover {
+        color: #28a745; /* Green color on hover */
+      }
+      .city_container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 10px;
+        margin-left: 100px;
+      }
+      
+      .city_item {
+        flex: 1 1 calc(33.33% - 10px); /* Three columns layout */
+        padding: 5 0;
+        cursor: pointer;
+        text-decoration: none;
+        color: #000;
+        display: flex;
+        align-items: center;
+      }
+      
+      .city_item:hover {
+        color: #28a745; /* Change text color to green on hover */
+      }
+      .city_arrow {
+        width: 18px;
+        transform: rotate(45deg);
+        margin-right: 8px; /* Space between arrow and city name */
+      }
+      /* Remove the underline for all links */
+      .city_item a {
+        text-decoration: none;
+      }

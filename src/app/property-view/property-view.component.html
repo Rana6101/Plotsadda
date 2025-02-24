@@ -1,0 +1,428 @@
+<div class="main">
+    <div class="title">
+        <hr>
+        <div class="container">
+            <div class="container">
+                <h1>{{propertyDetail.ad_title ||''}}</h1>
+                <p>{{propertyDetail.location}}</p>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div class="container">
+        
+        <div class="row container">
+            
+            <!-- Left Column (Section for Ads) -->
+            <div class="col-12 col-md-8 card">
+                <div class="">            
+                   <div class="show-property">
+                        <div class="property_img col-md-8 col-12 py-2">
+                            <img class="w-100 product-img" src="{{propertyDetail.property_img}}" alt="">
+                            <div class="p-4">
+                                <p class="mb-0">
+                                    <i class="fa fa-bed"></i> {{propertyDetail.no_of_bedroom}} Beds
+                                    <i class="fa fa-shower" style="margin-left: 10px;"></i> {{propertyDetail.no_of_bath}} Baths
+                                    <i class="fa fa-ruler-vertical" style="margin-left: 10px;"></i> {{propertyDetail.area_size}} {{propertyDetail.area_unit}}
+                                </p>
+                            </div>
+                            <hr class="mt-0">
+                        </div>
+                        <div class="detail_section">
+                            
+                        </div>
+                        <div class="overview">
+                            <h2 class="col-12">Overview</h2>
+                            <h3 class="col-12">Details</h3>
+
+                            <div class="detail_table d-flex col-12">
+                                <table class="col-6">
+                                    <tr>
+                                        <td>Type</td>
+                                        <td>{{propertyDetail.property_type}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Price</td>
+                                        <td>{{propertyDetail.price}}</td>
+                                    </tr>
+                                    <tr>
+                                    <td>Location</td>
+                                    <td>{{propertyDetail.location}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Bath(s)</td>
+                                    <td>{{propertyDetail.no_of_bath}}</td>
+                                </tr>
+                            </table>
+                            <table class="col-6 ">
+                                <tr>
+                                    <td>Area</td>
+                                    <td>{{propertyDetail.area_size}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Purpose</td>
+                                    <td>{{propertyDetail.purpose}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Bedroom(s)</td>
+                                    <td>{{propertyDetail.no_of_bedroom}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Added</td>
+                                    <td>{{propertyDetail.createdAt | date}}</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <hr> 
+                            <div class="description" *ngIf="propertyDetail.ad_description">
+                                <h3>Description</h3>
+                                <p>{{propertyDetail.ad_description}}</p>
+                                <hr>
+                            </div>
+                            <div class="facilities">
+                                <h3>Amenities</h3>
+                                <div class="sec1">
+                                    <div class="d-flex">
+                                        <div class="col-2 sec_heading">
+                                            Main Feature
+                                        </div>
+                                        <div class="col-10">
+                                            <ul class="sec1-list">
+                                                <li class="_59261156">
+                                                    <i class="fa fa-bed"></i>
+                                                    <span class="opt_li p-2">Property Age:</span>
+                                                </li>
+                                                <li class="_59261156">
+                                                    <i class="fa fa-bed"></i>
+                                                    <span class="opt_li p-2">Parking Availability</span>
+                                                </li>
+                                                <li class="_59261156">
+                                                    <i class="fa fa-bed"></i>
+                                                    <span class="opt_li p-2">Power Backup</span>
+                                                </li>
+                                                <li class="_59261156">
+                                                    <i class="fa fa-bed"></i>
+                                                    <span class="opt_li p-2">Waste Management System</span>
+                                                </li>
+                                                <li class="_59261156">
+                                                    <i class="fa fa-bed"></i>
+                                                    <span class="opt_li p-2">Total Floors: 2</span>
+                                                </li>
+                                                <li class="_59261156">
+                                                    <i class="fa fa-bed"></i>
+                                                    <span class="opt_li p-2">Additional Unique Features</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sec2">
+                                    <div class="d-flex">
+                                        <div class="col-2 sec_heading">
+                                            Rooms
+                                        </div>
+                                        <div class="col-10">
+                                            <ul class="sec1-list">
+                                                <li class="_59261156">
+                                                    <i class="fa fa-bed"></i>
+                                                    <span class="opt_li p-2">Total Bedrooms: {{propertyDetail.no_of_bedroom}}</span>
+                                                </li>
+                                                <li class="_59261156">
+                                                    <i class="fa fa-bed"></i>
+                                                    <span class="opt_li p-2">Total Bathrooms: {{propertyDetail.no_of_bath}}</span>
+                                                </li>
+                                                <li class="_59261156">
+                                                    <i class="fa fa-bed"></i>
+                                                    <span class="opt_li p-2">Servant Quarters: 2</span>
+                                                </li>
+                                                <li class="_59261156">
+                                                    <i class="fa fa-bed"></i>
+                                                    <span class="opt_li p-2">Formal Drawing Room</span>
+                                                </li>
+                                                <li class="_59261156">
+                                                    <i class="fa fa-bed"></i>
+                                                    <span class="opt_li p-2">Elegant Dining Room</span>
+                                                </li>
+                                                <li class="_59261156">
+                                                    <i class="fa fa-bed"></i>
+                                                    <span class="opt_li p-2">Modern Kitchens: 2</span>
+                                                </li>
+                                                <li class="_59261156">
+                                                    <i class="fa fa-bed"></i>
+                                                    <span class="opt_li p-2">Guest Powder Room</span>
+                                                </li>
+                                                <li class="_59261156">
+                                                    <i class="fa fa-bed"></i>
+                                                    <span class="opt_li p-2">Spacious Living Area</span>
+                                                </li>
+                                                <li class="_59261156">
+                                                    <i class="fa fa-bed"></i>
+                                                    <span class="opt_li p-2">Dedicated Laundry Space</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sec3">
+                                    <div class="d-flex">
+                                        <div class="col-2 sec_heading">
+                                            Interior & Infrastructure
+                                        </div>
+                                        <div class="col-10">
+                                            <ul class="sec1-list">
+                                                <li class="_59261156">
+                                                    <i class="fa fa-bed"></i>
+                                                    <span class="opt_li p-2">Premium Flooring</span>
+                                                </li>
+                                                <li class="_59261156">
+                                                    <i class="fa fa-bed"></i>
+                                                    <span class="opt_li p-2">Water Supply 24/7</span>
+                                                </li>
+                                                <li class="_59261156">
+                                                    <i class="fa fa-bed"></i>
+                                                    <span class="opt_li p-2">Gass Supply</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sec4">
+                                    <div class="d-flex">
+                                        <div class="col-2 sec_heading">
+                                            Business and Communication
+                                        </div>
+                                        <div class="col-10">
+                                            <ul class="sec1-list">
+                                                <li class="_59261156">
+                                                    <i class="fa fa-bed"></i>
+                                                    <span class="opt_li p-2">High-Speed Internet </span>
+                                                </li>
+                                                <li class="_59261156">
+                                                    <i class="fa fa-bed"></i>
+                                                    <span class="opt_li p-2">Cable TV & Satellite Ready</span>
+                                                </li>
+                                                <li class="_59261156">
+                                                    <i class="fa fa-bed"></i>
+                                                    <span class="opt_li p-2">Intercom Installed</span>
+                                                </li>
+                                                <li class="_59261156">
+                                                    <i class="fa fa-bed"></i>
+                                                    <span class="opt_li p-2">Other Communication Facilities</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sec5">
+                                    <div class="d-flex">
+                                        <div class="col-2 sec_heading">
+                                            Community Features
+                                        </div>
+                                        <div class="col-10">
+                                            <ul class="sec1-list">
+                                                <li class="_59261156">
+                                                    <i class="fa fa-bed"></i>
+                                                    <span class="opt_li p-2">Lush Green Parks & Gardens</span>
+                                                </li>
+                                                <li class="_59261156">
+                                                    <i class="fa fa-bed"></i>
+                                                    <span class="opt_li p-2">Exclusive Swimming Pool</span>
+                                                </li>
+                                                <li class="_59261156">
+                                                    <i class="fa fa-bed"></i>
+                                                    <span class="opt_li p-2">State-of-the-Art Fitness Center</span>
+                                                </li>
+                                                <li class="_59261156">
+                                                    <i class="fa fa-bed"></i>
+                                                    <span class="opt_li p-2">Medical & First Aid Facility</span>
+                                                </li>
+                                                <li class="_59261156">
+                                                    <i class="fa fa-bed"></i>
+                                                    <span class="opt_li p-2">Childcare & Daycare Services</span>
+                                                </li>
+                                                <li class="_59261156">
+                                                    <i class="fa fa-bed"></i>
+                                                    <span class="opt_li p-2">Children’s Play Area</span>
+                                                </li>
+                                                <li class="_59261156">
+                                                    <i class="fa fa-bed"></i>
+                                                    <span class="opt_li p-2">Barbecue & Picnic Spots</span>
+                                                </li>
+                                                <li class="_59261156">
+                                                    <i class="fa fa-bed"></i>
+                                                    <span class="opt_li p-2">Grand Mosque </span>
+                                                </li>
+                                                <li class="_59261156">
+                                                    <i class="fa fa-bed"></i>
+                                                    <span class="opt_li p-2">Fully Equipped Community Hall</span>
+                                                </li>
+                                                <li class="_59261156">
+                                                    <i class="fa fa-bed"></i>
+                                                    <span class="opt_li p-2">Other Social & Community Amenities</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sec6">
+                                    <div class="d-flex">
+                                        <div class="col-2 sec_heading">
+                                            Healthcare Recreational
+                                        </div>
+                                        <div class="col-10">
+                                            <ul class="sec1-list">
+                                                <li class="_59261156">
+                                                    <i class="fa fa-bed"></i>
+                                                    <span class="opt_li p-2">Private Garden or Lawn</span>
+                                                </li>
+                                                <li class="_59261156">
+                                                    <i class="fa fa-bed"></i>
+                                                    <span class="opt_li p-2">Relaxing Jacuzzi Experience</span>
+                                                </li>
+                                                <li class="_59261156">
+                                                    <i class="fa fa-bed"></i>
+                                                    <span class="opt_li p-2">Other Recreational & Wellness Facilities</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sec7">
+                                    <div class="d-flex">
+                                        <div class="col-2 sec_heading">
+                                            Nearby Locations and Other Facilities
+                                        </div>
+                                        <div class="col-10">
+                                            <ul class="sec1-list">
+                                                <li class="_59261156">
+                                                    <i class="fa fa-bed"></i>
+                                                    <span class="opt_li p-2">Top Educational Institutions Nearby</span>
+                                                </li>
+                                                <li class="_59261156">
+                                                    <i class="fa fa-bed"></i>
+                                                    <span class="opt_li p-2">Reputed Hospitals & Clinics in Proximity</span>
+                                                </li>
+                                                <li class="_59261156">
+                                                    <i class="fa fa-bed"></i>
+                                                    <span class="opt_li p-2">Shopping & Entertainment Hubs</span>
+                                                </li>
+                                                <li class="_59261156">
+                                                    <i class="fa fa-bed"></i>
+                                                    <span class="opt_li p-2">Fine Dining & Popular Restaurants</span>
+                                                </li>
+                                                <li class="_59261156">
+                                                    <i class="fa fa-bed"></i>
+                                                    <span class="opt_li p-2">Easy Access to Airport</span>
+                                                </li>
+                                                <li class="_59261156">
+                                                    <i class="fa fa-bed"></i>
+                                                    <span class="opt_li p-2">Public Transport Availability</span>
+                                                </li>
+                                                <li class="_59261156">
+                                                    <i class="fa fa-bed"></i>
+                                                    <span class="opt_li p-2">Other Notable Nearby Places</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sec8">
+                                    <div class="d-flex">
+                                        <div class="col-2 sec_heading">
+                                           Additional Key Features
+                                        </div>
+                                        <div class="col-10">
+                                            <ul class="sec1-list">
+                                                <li class="_59261156">
+                                                    <i class="fa fa-bed"></i>
+                                                    <span class="opt_li p-2">Security: 24/7 CCTV</span>
+                                                </li>
+                                                <li class="_59261156">
+                                                    <i class="fa fa-bed"></i>
+                                                    <span class="opt_li p-2">Security Staff </span>
+                                                </li>
+                                                <li class="_59261156">
+                                                    <i class="fa fa-bed"></i>
+                                                    <span class="opt_li p-2">Pet-Friendly</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 px-3">
+                <section class="ads-section card" >
+                    <div class="price_heading">
+                        <h3 class="p-3 mb-0">PKR: {{propertyDetail.price}}</h3>
+                    </div>
+                    <div class="p-3 contact_btn">
+                        
+                        <button class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">Call</button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">PlotsAdda</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                {{propertyDetail.phone}}
+                                </div> 
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="queryForm p-3">
+                        <form action="" [formGroup]="queryForm">
+                            <div class=" p-2 ">
+                                <div class="label">
+                                  <label for="">Name*</label>
+                                </div>
+                                <input type="text" formControlName="user_name" class="w-100 p-1 form-control" placeholder="Enter Your Name">
+                              </div>
+                              <div class="p-2">
+                                <div class="label">
+                                  <label for="">Phone*</label>
+                                </div>
+                                <input type="number" formControlName="phone" class="w-100 p-1 form-control" maxlength="13" value="92" >
+                              </div>
+                              <div class="p-2">
+                                <div class="label">
+                                  <label for="">Email*</label>
+                                </div>
+                                <input type="email" formControlName="email" class="w-100 form-control p-1" placeholder="Enter Email">
+                              </div>
+                              <div class="p-2">
+                                <div class="label">
+                                  <label for="">Message*</label>
+                                </div>
+                                <textarea formControlName="message" class="w-100 form-control" name="" id=""></textarea>
+                              </div>
+                              <div>
+
+                                <div class="p-2">
+                                  <label for="" >I am a:</label>  
+                                  <input type="radio" class="mx-2" formControlName="role" value="agent" id="agent" >
+                                  <label for="agent" class="p-1">Agent</label>
+                                  <input type="radio" class="mx-2" formControlName="role" value="buyer" id="buyer">
+                                  <label for="buyer" class="p-1" >Buyer/Tenant</label>
+                                  <input type="radio" class="mx-2" formControlName="role" value="other" id="other">
+                                  <label for="other" class="p-1" >Other</label>
+                                </div>
+                              </div>    
+                        </form>
+                    </div>
+                    <div class="submit p-3">
+                        <button (click)="sendQuery()" class="btn btn-outline-success w-100"><span class="mx-2" ><img class="btn_img" src="../../assets/envelope-icon.JPG" alt=""></span>SEND EMAIL</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>

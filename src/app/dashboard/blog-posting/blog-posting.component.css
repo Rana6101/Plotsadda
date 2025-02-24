@@ -1,0 +1,15 @@
+.blog-posting{
+    text-decoration: none;
+    display: block;
+}
+.main-section{
+    background: #F4F5F7;
+}
+.user{
+    background: #ffffff;
+    border-radius: 25px;
+}
+.form textarea{
+    border-radius: 10px;
+    height: 135px;
+}

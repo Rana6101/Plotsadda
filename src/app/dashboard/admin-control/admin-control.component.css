@@ -1,0 +1,8 @@
+table{
+    --bs-table-height: 30vh;
+    overflow-y: scroll;
+}
+.table_container{
+    height: 30vh;
+    overflow-y: scroll;
+}

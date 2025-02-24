@@ -1,0 +1,71 @@
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.icon-container {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    gap: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.icon-btn {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+}
+.icon-text {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+.hot{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.icon-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);  /* Slightly darker on hover */
+}
+  
+.icon-btn i {
+    font-size: 20px;
+}
+.btn-container{
+    background: antiquewhite;
+
+}
+.btn-container a {
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+.card-body {
+    padding: 20px;
+    /* flex-grow: 1; */
+    background-color: antiquewhite;
+}
+.row_class {
+    display: flex;
+    flex-direction: column;  
+     /* To position the button container relative to this div */
+}
+.card:hover {
+    box-shadow: 0 4px 15px rgba(8, 153, 64, 0.5); /* Optional shadow effect on hover */
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    transform: scale(1.02);
+    transition: transform 0.5s ease;
+}

@@ -1,0 +1,23 @@
+.blog_img_container img{
+    width: 100%;
+    height: 80vh;
+    border-radius: 20px;
+}
+.newsLetter{
+    background: #15A037;
+    color: #fafafa;
+}
+.instaTitle{
+    background: linear-gradient(45deg, #f9ed32 0%, #ee2a7b 62%, #002aff 100%);
+}
+.blog_img_container{
+    position: relative;
+}
+.img_title{
+    position: absolute;
+    top:65vh;
+    left: 100px;
+    color: white;
+    font-weight: bolder;
+    
+}

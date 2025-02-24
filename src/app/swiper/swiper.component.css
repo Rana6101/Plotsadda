@@ -1,0 +1,81 @@
+/* swiper-container{
+    height: 500px;
+} */
+.hot{
+    font-size: 12px;
+    border-radius: 3px;
+    top: 5px;
+    left: 5px;
+    position: absolute;
+    z-index: 2;
+  }
+  .img-holder{
+    position: relative;
+  }
+  .project-card{
+    overflow-y: scroll;
+  }
+/* Adjust Swiper navigation */
+.swiper-button-next svg,
+.swiper-button-prev svg {
+    color: black;
+}
+
+  /* Card layout */
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;   
+  }
+
+  .swiper-slide .card1 {
+    background: none;
+    width: 328px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    /* transition: box-shadow 0.3s ease; */
+    box-shadow: 0px 4px 8px rgba(255, 253, 253, 0);
+}
+
+  .img-holder img {
+    width: 100%; /* Ensures the image fills the width of the card */
+    height: 180px; /* Adjusts height proportionally */
+    object-fit: cover; /* Ensures the image covers the area without stretching */
+    border-radius: 15px;
+}
+
+  /* General Styles for Titles */
+.title {
+font-size: 1.1em;
+}
+
+/* Price Range: Bold and Larger */
+.price-range {
+font-weight: bold;
+font-size: 1.2em;
+color: #2c3e50;
+}
+
+/* Location: Italicized and Muted */
+.location {
+font-style: italic;
+color: #34495e;
+}
+
+/* Location Information: Muted Color */
+.location-info {
+color: #7f8c8d;
+}
+
+/* Property Type: Bold and Color Accent */
+.property-type {
+font-weight: bold;
+color: #e74c3c;
+}
+
+/* Area Range: Default but slightly larger font size */
+.area-range {
+font-size: 1.1em;
+}
