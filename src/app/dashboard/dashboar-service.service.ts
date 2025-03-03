@@ -43,6 +43,10 @@ export class DashboarServiceService {
     let project_url = this.BASE_URL + "/project"
     return this._http.get(project_url)
   }
+  getSingleProject(id:any){
+    let project_url = this.BASE_URL + "/project"
+    return this._http.get(`${project_url}/${id}`)
+  }
 
   postInquery(data:any){
     let inquery_url = this.BASE_URL + "/inquery"

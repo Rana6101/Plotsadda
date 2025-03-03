@@ -1,1 +1,150 @@
-<p>project-view works!</p>
+<div class="main">
+    <div class="container">
+        <div class="intro">
+            <div class="d-flex">
+                <div class="col-8 pt-3">
+                    <h1 class="mb-0">{{projectDetail.project_title}}</h1>
+                    <p>{{projectDetail.project_location}}</p>
+                </div>
+                <div class="col-4 pt-4">
+                    <div class="d-flex pt-4">
+                        <span class="pt-2 pr-2">  PKR </span>
+                        <h3>{{projectDetail.project_cost}}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>       
+        <div class="img_section">
+            <div class="d-flex">
+                <div class="col-8 p-2">
+                    <img class="w-100 proj-main-img" src="{{projectDetail.project_pic_file}}" alt="">
+                </div>
+                <div class="col-4">
+                    <img class="w-100 m-2 proj-side-img" src="../../assets/3.jpeg" alt="">
+                    <img class="w-100 m-2 proj-side-img" src="../../assets/3.jpeg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            
+            <!-- Left Column (Section for Ads) -->
+            <div class="col-12 col-md-8">
+                <div class="">            
+                   <div class="show-project">
+                        <div class="overview">
+                            <h2 class="col-12">Overview</h2>
+                           
+                            <div class="d-flex col-12">
+                                <div class="col-6 d-flex">
+                                    <span class="offering-icon col-2"><img src="../../assets/02-label.JPG" alt=""></span>
+                                    <span class="col-9 p-2">
+                                        <span>Offering <br>  <b>{{projectDetail.project_type}}</b></span>
+                                    </span>
+                                </div>
+                                <div class="col-6 d-flex">
+                                    <span class="offering-icon col-2"><img src="../../assets/02-label.JPG" alt=""></span>
+                                    <span class="col-9 p-2">
+                                        <span>Developer <br> <b>NEX Developers </b></span>
+                                    </span>
+                                </div>
+                            </div>
+                            <hr> 
+                            <div class="description" >
+                                <h3>Description</h3>
+                                <p>{{projectDetail.project_des}}</p>
+                                <hr>
+                            </div>
+                            <div class="payment_plan">
+                                <h3>Payment Plan</h3>
+                                <div class="sec1">
+                                  <img src="../../assets/payment-plan.jpeg" alt="">
+                                </div>
+                                <div class="sec1">
+                                    <img src="../../assets/payment-plan-2.jpeg" alt="">
+                                </div>
+                                <div class="sec1">
+                                    <img src="../../assets/payment-plan-3.jpeg" alt="">
+                                </div>
+                                <hr>
+                            </div>
+                            <div class="project_map">
+                                <h3>Project Map</h3>
+                                <div class="sec1">
+                                  <img src="../../assets/project-map.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 px-3">
+                <section class="ads-section w-100 card" >
+                    <div class="p-3 contact_btn">
+                        
+                        <button class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">Call</button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">PlotsAdda</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body text-center my-2">
+                                    <div class="bg-success  py-4 text-light call_model">
+                                        <span>Call At:</span>
+                                        +92-331-555-7494
+                                    </div>
+                                </div> 
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="queryForm p-3">
+                        <form action="" [formGroup]="queryForm" >
+                            <div class=" p-2 ">
+                                <div class="label">
+                                  <label for="">Name*</label>
+                                </div>
+                                <input type="text" formControlName="user_name" class="w-100 p-1 form-control" placeholder="Enter Your Name">
+                              </div>
+                              <div class="p-2">
+                                <div class="label">
+                                  <label for="">Phone*</label>
+                                </div>
+                                <input type="number" formControlName="phone" class="w-100 p-1 form-control" maxlength="13" value="92" >
+                              </div>
+                              <div class="p-2">
+                                <div class="label">
+                                  <label for="">Email*</label>
+                                </div>
+                                <input type="email" formControlName="email" class="w-100 form-control p-1" placeholder="Enter Email">
+                              </div>
+                              <div class="p-2">
+                                <div class="label">
+                                  <label for="">Message*</label>
+                                </div>
+                                <textarea formControlName="message" class="w-100 form-control" name="" id=""></textarea>
+                              </div>
+                              <div>
+
+                                <div class="p-2">
+                                  <label for="" >I am a:</label>  
+                                  <input type="radio" class="mx-2" formControlName="role" value="agent" id="agent" >
+                                  <label for="agent" class="p-1">Agent</label>
+                                  <input type="radio" class="mx-2" formControlName="role" value="buyer" id="buyer">
+                                  <label for="buyer" class="p-1" >Buyer/Tenant</label>
+                                  <input type="radio" class="mx-2" formControlName="role" value="other" id="other">
+                                  <label for="other" class="p-1" >Other</label>
+                                </div>
+                              </div>    
+                        </form>
+                    </div>
+                    <div class="submit p-3">
+                        <button  class="btn btn-outline-success w-100"><span class="mx-2" ><img class="btn_img" src="../../assets/envelope-icon.JPG" alt=""></span>SEND EMAIL</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
