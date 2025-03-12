@@ -8,7 +8,7 @@
               <div class="label p-2">Add New Blog</div>
             </div>
             <div class="col-12 col-md-10 col-lg-10">
-              <form [formGroup]="blogForm">
+              <form [formGroup]="blogForm"  method="post" enctype="multipart/form-data">
               <div class=" container px-1 px-md-4 px-lg-4">
                 <div class="d-flex ">
                     <div class="col-12 p-0 px-md-4 px-lg-4 py-md-2 py-lg-2 ">
@@ -22,7 +22,9 @@
                   <div class="col-12 p-0 px-md-4 px-lg-4 py-md-2 py-lg-2">
                       <div><label for="">Feature Image</label></div>
                       <div class="d-flex">
-                        <input type="file" (change)="onUploadChange($event)" accept=".png, .jpg, .jpeg, .pdf" formControlName="blog_pic" class="form-control w-100 p-2">
+                        <input type="file" 
+                        
+                         accept=".png, .jpg, .jpeg, .pdf" formControlName="blog_pic" name="blog_pic" (change)="onFileSelected($event)" class="form-control w-100 p-2">
                       </div>
                   </div>
               </div>

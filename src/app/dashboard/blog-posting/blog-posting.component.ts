@@ -9,6 +9,7 @@ import { DashboarServiceService } from '../dashboar-service.service';
 })
 export class BlogPostingComponent {
   base64textString = [''];
+  selectedFile:any
   constructor(private _fb:FormBuilder, private _service:DashboarServiceService){}
   blogForm:FormGroup = this._fb.group(
     {
@@ -16,32 +17,40 @@ export class BlogPostingComponent {
       user_name:['Rana',Validators.required],
       blog_title:['',Validators.required],
       blog_pic:['',Validators.required],
-      blog_pic_file:['',Validators.required],
+      blog_pic_file:[null,Validators.required],
       blog_des:['',Validators.required]
     }
   )
-
-
-
-  onUploadChange(evt: any) {
-    const file = evt.target.files[0];
-  
+  onFileSelected(event: any) {
+    const file = event.target.files[0];
     if (file) {
-      const reader = new FileReader();
-  
-      reader.onload = this.handleReaderLoaded.bind(this);
-      reader.readAsBinaryString(file);
-
+      this.selectedFile = file;
+      this.blogForm.patchValue({ blog_pic_file: this.selectedFile });
+      console.log(this.selectedFile)
     }
   }
+
+
+
+  // onUploadChange(evt: any) {
+  //   const file = evt.target.files[0];
   
-  handleReaderLoaded(e:any) {
-    this.base64textString = []
-    this.base64textString.push('data:image/png;base64,' + btoa(e.target.result));
-    console.log("conversion",this.base64textString)
-  }
+  //   if (file) {
+  //     const reader = new FileReader();
+  
+  //     reader.onload = this.handleReaderLoaded.bind(this);
+  //     reader.readAsBinaryString(file);
+
+  //   }
+  // }
+  
+  // handleReaderLoaded(e:any) {
+  //   this.base64textString = []
+  //   this.base64textString.push('data:image/png;base64,' + btoa(e.target.result));
+  //   console.log("conversion",this.base64textString)
+  // }
   addBlog(){
-    this.blogForm.patchValue({blog_pic_file:[this.base64textString[0]]})
+    // this.blogForm.patchValue({blog_pic_file:[this.base64textString[0]]})
     if(this.blogForm.valid){
       this._service.postBlog(this.blogForm.value).subscribe(data=>{
         console.log('addblog',data)
