@@ -23,8 +23,20 @@
     background: #fff9f9;
 }
 .product-img{
-    border-radius: 25px;
+    /* border-radius: 25px; */
+    height: 500px;
 }
 .btn_img{
     width: 25px;
+}
+.call_to_action{
+    font-size: 20px;
+}
+.modal{
+    vertical-align: middle;
+}
+.modal-icon{
+    max-width: 25px;
+    height: 25px;
+    margin-right:25px ;
 }

@@ -3,8 +3,8 @@
         <hr>
         <div class="container">
             <div class="container">
-                <h1>{{propertyDetail.ad_title ||''}}</h1>
-                <p>{{propertyDetail.location}}</p>
+                <h2>{{propertyDetail.ad_title ||''}}</h2>
+                <h4>{{propertyDetail.location}}</h4>
             </div>
         </div>
         <hr>
@@ -362,17 +362,24 @@
                     </div>
                     <div class="p-3 contact_btn">
                         
-                        <button class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">Call</button>
+                        <button class="btn btn-success w-100 call_to_action" data-bs-toggle="modal" data-bs-target="#exampleModal">Call</button>
                         <!-- Modal -->
                         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                             <div class="modal-content">
-                                <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">PlotsAdda</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <div class="modal-header bg-success text-center">
+                                <h5 class="modal-title text-center  text-light" id="exampleModalLabel">PlotsAdda</h5>
+                                <button type="button" class="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                {{propertyDetail.phone}}
+                                    <h3>
+                                        <img class="modal-icon" src="../../assets/gmail.png" alt="">
+                                        {{propertyDetail.email}}
+                                    </h3>
+                                    <h3>
+                                        <img class="modal-icon" src="../../assets/smartphone-call.png" alt="">
+                                        +92-{{propertyDetail.phone}}
+                                    </h3>
                                 </div> 
                             </div>
                             </div>

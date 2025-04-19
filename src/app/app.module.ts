@@ -31,6 +31,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BlogViewComponent } from './blog-view/blog-view.component';
 import { PropertyViewComponent } from './property-view/property-view.component';
 import { ProjectViewComponent } from './project-view/project-view.component';
+import { DocumentEditorModule } from '@txtextcontrol/tx-ng-document-editor';
+import { DocumentViewerModule } from '@txtextcontrol/tx-ng-document-viewer';
 
 
 registerLocaleData(en);
@@ -67,6 +69,8 @@ registerLocaleData(en);
     NzCascaderModule,
     FormsModule,
     BrowserAnimationsModule,
+    DocumentEditorModule,
+    DocumentViewerModule,
 ],
   providers: [
     { provide: NZ_I18N, useValue: en_US }
