@@ -2,3 +2,6 @@
 .ant-cascader-menu{
     min-width: 165px;
 }
+.listing-row{
+    --bs-gutter-x: 0px;
+  }

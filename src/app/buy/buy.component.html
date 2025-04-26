@@ -8,7 +8,7 @@
         </div>
         <div class="">
           <div class="">
-              <select class="form-control" id="purpose" name="whoAreU">
+              <select class="form-control form-select" id="purpose" name="whoAreU">
                   <option value="buy">Buy</option>
                   <option value="rent">Rent</option>
               </select>
@@ -20,7 +20,7 @@
             <div class="label">
               <label for=""  style="color: white;"><b>City</b></label>
             </div>
-              <select class="form-control">
+              <select class="form-control form-select">
                 <option value="">--Select--</option>
                  <option *ngFor="let city of cityList" value="{{city.value}}">{{city.cityName}}</option>
               </select>
@@ -62,16 +62,18 @@
     <div id="price_min" class=" d-flex" style="background-color:transparent;">
       <div class=" w-100 mb-3" style="padding-right: 15px;margin-right:10px;">
           <label for="minPrice" style="color: white;"><b>Price Min:</b></label>
-          <select class="form-control" id="minPrice" (change)="maxUpdate($event)" name="minPrice" >
+          <select class="form-control form-select" id="minPrice" (change)="maxUpdate($event)" name="minPrice" >
             <option value="">Select</option>
               <option *ngFor="let min of filterMinPrice" value="{{min.value}}">{{min.value}}</option>
           </select>
       </div>
       <div class=" filter_div w-100 mb-3" style="padding-left: 15px;">
           <label for="maxPrice"style="color: white;"><b>Price Max:</b></label>
-          <select class="form-control w-100" (change)="minUpdate($event)" id="maxPrice" name="maxPrice">
-            <option value="">Select</option>
-            <option style="border: 2px solid black;" *ngFor="let max of filterMaxPrice" value="{{max.value}}" >{{max.value}}</option>
+          <select class="form-control w-100 form-select" (change)="minUpdate($event)" id="maxPrice" name="maxPrice">
+            <div style="max-height: 250px;">
+              <option value="">Select</option>
+              <option style="border: 2px solid black;" *ngFor="let max of filterMaxPrice" value="{{max.value}}" >{{max.value}}</option>
+            </div>
           </select>
       </div>
     </div>
@@ -113,7 +115,7 @@
 <div id="home_opt" class="col-md-3 d-flex" style="background-color:transparent;">
   <div class="filter_div w-100 mb-3" style="padding-right: 15px;">
       <label for="bedrooms" style="color: white;"><b>Beds</b></label>
-      <select class="form-control" id="bedrooms" name="roomNo">
+      <select class="form-control form-select" id="bedrooms" name="roomNo">
         <option value="">Select</option>
           <option value="1">1</option>
           <option value="2">2</option>
@@ -129,7 +131,7 @@
   </div>
   <div class=" filter_div w-100 mb-3" style="padding-left: 15px;">
       <label for="bathrooms"style="color: white;"><b>Baths</b></label>
-      <select class="form-control" id="bathrooms" name="broomNo">
+      <select class="form-control form-select" id="bathrooms" name="broomNo">
         <option value="">Select</option>
           <option value="1">1</option>
           <option value="2">2</option>
@@ -145,7 +147,7 @@
 
 <div class="section">
     <div class="main" >
-        <div class="row">
+        <div class="row listing-row">
          <!-- Left Column (Section for Ads) -->
           <div class="col-12 col-md-8" style="margin-left: 50px;">
           <div class="container">            

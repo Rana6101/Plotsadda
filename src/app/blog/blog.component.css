@@ -1,5 +1,5 @@
 .banner{
-    height: 500px;
+    height: 600px;
     background: url('../../assets/Blogs-gbg.png');
     background-repeat: round;
 }
@@ -25,16 +25,15 @@
     border-radius: 25px;
 }
 .card-body{
-    height: 160px;
+    max-height: 160px;
     padding: 30px;
-    text-align: justify;
+    padding-bottom:  0px;
+        text-align: justify;
     overflow: hidden;
 }
 .card{
     background: #EAF3FD;
-
     border: none;
-
 }
 .read_more{
     border-radius: 5px;

@@ -14,7 +14,10 @@ export class HeaderComponent {
   LoginData:any;
   constructor(private _service:AuthServiceService, private _router:Router){  
      console.log(this._service.isLoggedIn())
-     this.loginStatus = this._service.isLoggedIn()
+     this._service.loginUser.subscribe(data=>{
+      this.loginStatus = data;
+      console.log(data)
+     })
      this.LoginData = this._service.loginUser.value
      this.LoginData = JSON.parse(this.LoginData)
      console.log('login user', this.LoginData)  
@@ -22,8 +25,8 @@ export class HeaderComponent {
 
   sign_out(){
     this._service.logoutUser()
-    this.loginStatus = this._service.isLoggedIn;
     console.log('status',this.loginStatus)
+    this._router.navigateByUrl('/home')
     // this._router.navigateByUrl('/home')
   }
   agent(){
