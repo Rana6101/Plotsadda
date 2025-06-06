@@ -16,6 +16,23 @@
     overflow-y: scroll;
     scroll-behavior: smooth;
 } 
+.city-menu{
+    max-height: 50vh;
+    overflow-y: scroll;
+    width: 100%;
+}
+.btn-green{
+    background: #004623;
+    color:#fafafa;
+}
+.price-menu{
+    max-height: 30vh;
+    overflow-y: scroll;
+    width: 100%;
+}
+/* #city-select{
+    height: 100px;
+} */
 
 /* Styling for the card image */
 .card img {

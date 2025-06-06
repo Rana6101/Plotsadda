@@ -66,10 +66,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "PlotAdda:build:production"
+              "buildTarget": "PlotAdda:build:production"
             },
             "development": {
-              "browserTarget": "PlotAdda:build:development"
+              "buildTarget": "PlotAdda:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -77,7 +77,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "PlotAdda:build"
+            "buildTarget": "PlotAdda:build"
           }
         },
         "test": {
@@ -103,5 +103,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

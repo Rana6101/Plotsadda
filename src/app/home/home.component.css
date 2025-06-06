@@ -21,6 +21,15 @@
     z-index: 1; /* Ensures the search content is above the background */
     color: white; /* Change text color to stand out against the background */
   }
+  .info-logo{
+    z-index: 10000;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+  }
+  .info-logo img{
+    width: 75px;
+  }
   
   .search-btn button{
     width: 150px;

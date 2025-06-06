@@ -16,7 +16,7 @@ export class BuyComponent {
     private router:Router
     
   ){
-    this._dashservice.getListing().subscribe(data=>{
+    this._dashservice.getListing().subscribe((data: any)=>{
       this.property_list = data
       this.property_list = this.property_list.data
       console.log(data)
@@ -28,9 +28,13 @@ export class BuyComponent {
 
   }
   filterMinPrice:any=[]
+  minPriceValue:any = "--Select--"
+  maxPriceValue:any = "--Select--"
   filterMaxPrice:any=[]
+  selectedCity:any = "--select--"
   property_list:any;
   buy_list:any=[];
+  selectedAreaSize:any = "--Select--";
   filterProperty(data:any){
     data.filter((element:any)=>{
       if(element.purpose == 'sell'){
@@ -38,10 +42,20 @@ export class BuyComponent {
       }
     })
   }
+  selectedArea(data:any){
+    console.log(data.target.value)
+    console.log(data.target.innerHTML)
+    this.selectedAreaSize = data.target.innerHTML
+
+  }
+  selectedct(city:any){
+    this.selectedCity = city
+  }
   viewProperty(id:number){
     this.router.navigate(['/property_view',id])
   }
   minUpdate(data:any){
+    this.maxPriceValue = data.target.value;
     if(data.target.value != ''){
       this.filterMinPrice = []
     }else if(data.target.value == ''){
@@ -54,6 +68,7 @@ export class BuyComponent {
     })    
   }
   maxUpdate(data:any){
+    this.minPriceValue = data.target.value;
     if(data.target.value != ''){
       this.filterMaxPrice = []
     }else if(data.target.value == ''){

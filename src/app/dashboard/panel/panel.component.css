@@ -12,6 +12,10 @@
     gap: 5px;
     background-color: rgba(0, 0, 0, 0.5);
 }
+.green-btn{
+    background: #004623;
+    color: #fafafa;
+}
 
 .icon-btn {
     background-color: transparent;

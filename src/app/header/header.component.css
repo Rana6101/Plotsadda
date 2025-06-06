@@ -1,5 +1,5 @@
 .main{
-    background: #139F36;
+    background: #004623;
 }
 .nav-link span{
     color:#fafafa;
@@ -16,7 +16,7 @@
 .dropdown-menu-header {
     --bs-dropdown-bg:#fafafa;
     --bs-dropdown-link-color: #000000;
-    --bs-dropdown-link-hover-color: #139F36;
+    --bs-dropdown-link-hover-color: #004623;
     --bs-dropdown-link-hover-bg: rgb(164 164 164 / 15%);
 
 }

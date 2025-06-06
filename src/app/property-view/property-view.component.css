@@ -22,6 +22,11 @@
 .main{
     background: #fff9f9;
 }
+.video-green-bg{
+    background: #004623;
+    color: #fafafa;
+    border-radius: 15px;
+}
 .product-img{
     /* border-radius: 25px; */
     height: 500px;

@@ -8,6 +8,7 @@
 .footer ul li a{
     text-decoration: none;
     color: #d3d3d3;
+    line-height: 1.8rem;
 }
 .facebook_logo{
     border-radius: 50%;

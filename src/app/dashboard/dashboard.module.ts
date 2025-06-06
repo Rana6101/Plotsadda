@@ -10,27 +10,21 @@ import { BlogPostingComponent } from './blog-posting/blog-posting.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { PanelComponent } from './panel/panel.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { ProjectUploadingComponent } from './project-uploading/project-uploading.component';
 
 
-@NgModule({
-  declarations: [
-    DashboardComponent,
-    ListingComponent,
-    SettingComponent,
-    AdminControlComponent,
-    BlogPostingComponent,
-    SidebarComponent,
-    PanelComponent,
-    ProjectUploadingComponent
-  ],
-  imports: [
-    CommonModule,
-    DashboardRoutingModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule
-  ]
-})
+@NgModule({ declarations: [
+        DashboardComponent,
+        ListingComponent,
+        SettingComponent,
+        AdminControlComponent,
+        BlogPostingComponent,
+        SidebarComponent,
+        PanelComponent,
+        ProjectUploadingComponent
+    ], imports: [CommonModule,
+        DashboardRoutingModule,
+        FormsModule,
+        ReactiveFormsModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class DashboardModule { }

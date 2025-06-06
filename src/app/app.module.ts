@@ -21,7 +21,7 @@ import { CommercialComponent } from './commercial/commercial.component';
 import { LoginComponent } from './login/login.component';
 import { SwiperComponent } from './swiper/swiper.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { NzCascaderModule } from 'ng-zorro-antd/cascader';
 import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { en_US } from 'ng-zorro-antd/i18n';
@@ -37,45 +37,39 @@ import { DocumentViewerModule } from '@txtextcontrol/tx-ng-document-viewer';
 
 registerLocaleData(en);
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    AboutComponent,
-    HeaderComponent,
-    FooterComponent,
-    HomeComponent,
-    BlogComponent,
-    ContactComponent,
-    AgentComponent,
-    PrivacyComponent,
-    TermOfUseComponent,
-    JobsComponent,
-    AdvertiseComponent,
-    SellComponent,
-    BuyComponent,
-    RentComponent,
-    CommercialComponent,
-    LoginComponent,
-    BlogViewComponent,
-    PropertyViewComponent,
-    ProjectViewComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    SwiperComponent,
-    ReactiveFormsModule,
-    HttpClientModule,
-    NzCascaderModule,
-    FormsModule,
-    BrowserAnimationsModule,
-    DocumentEditorModule,
-    DocumentViewerModule,
-],
-  providers: [
-    { provide: NZ_I18N, useValue: en_US }
-  ],
-  bootstrap: [AppComponent],
-  schemas:[CUSTOM_ELEMENTS_SCHEMA]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        AboutComponent,
+        HeaderComponent,
+        FooterComponent,
+        HomeComponent,
+        BlogComponent,
+        ContactComponent,
+        AgentComponent,
+        PrivacyComponent,
+        TermOfUseComponent,
+        JobsComponent,
+        AdvertiseComponent,
+        SellComponent,
+        BuyComponent,
+        RentComponent,
+        CommercialComponent,
+        LoginComponent,
+        BlogViewComponent,
+        PropertyViewComponent,
+        ProjectViewComponent
+    ],
+    bootstrap: [AppComponent],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA], imports: [BrowserModule,
+        AppRoutingModule,
+        SwiperComponent,
+        ReactiveFormsModule,
+        NzCascaderModule,
+        FormsModule,
+        BrowserAnimationsModule,
+        DocumentEditorModule,
+        DocumentViewerModule], providers: [
+        { provide: NZ_I18N, useValue: en_US },
+        provideHttpClient(withInterceptorsFromDi())
+    ] })
 export class AppModule { }
