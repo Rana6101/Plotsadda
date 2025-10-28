@@ -12,15 +12,17 @@ import { NgFor, NgIf } from '@angular/common';
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class SwiperComponent {
-   projectList:any;
-    constructor(
-      private _dService:DashboarServiceService, private router:Router){
-        this._dService.getProject().subscribe(data=>{
-          this.projectList = data
-          this.projectList = this.projectList.data
-          console.log(this.projectList)
-        })
-      }
+     projectList:any;
+     constructor(
+       private _dService:DashboarServiceService, private router:Router){
+         this._dService.getProject().subscribe((data:any)=>{
+           this.projectList = data
+           this.projectList = this.projectList.data
+           console.log(this.projectList)
+           console.log(this.projectList.project_pic[0])
+          })
+        }
+      IMG_BASE_URL=this._dService.BASE_URL
       viewProject(id:number){
         this.router.navigate(['/project_view',id])
       }

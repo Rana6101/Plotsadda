@@ -1,1 +1,236 @@
-<p>commercial works!</p>
+<div class="content-container1" style="background-color: #004623; padding: 5px 30px; left: 0; width: 100%;">
+    <div class="row">
+      
+<!-- Buy and rent drop dropdown -->
+<div class="filter_div col-md-3"  >
+        <div class="label">
+          <label for="" style="color: white;"><b>I want to</b></label>
+        </div>
+        <div class="">
+          <div class="">
+              <select class="form-control form-select" id="purpose" name="whoAreU">
+                  <option value="buy">Buy</option>
+                  <option value="rent">Rent</option>
+              </select>
+          </div>
+        </div>
+</div>
+          <!-- city dropdown -->
+          <div class="filter_div col-md-3">
+            <div class="label">
+              <label for=""  style="color: white;"><b>City</b></label>
+            </div>
+            <div class="dropdown ">
+              <div class=" form-control form-select w-100" data-bs-toggle="dropdown" aria-expanded="false">{{selectedCity}}</div>
+              <ul class="dropdown-menu city-menu">
+                <li class="dropdown-item"  *ngFor="let city of cityList" value="{{city.value}}" (click)="selectedct(city.cityName)">{{city.cityName}}</li>
+              </ul>
+            </div>
+          </div>
+
+
+          <!-- Location dropdown -->
+          <div class=" filter_div col-md-3">
+            <div class="label">
+              <label for="" style="color: white;"><b>Location</b></label>
+            </div>
+            <input type="text" class="w-100 form-control" placeholder="Enter Location" >
+          </div>
+
+          <!-- Property_type -->
+            
+          <div class="filter_div col-md-3">
+            <div class="label">
+                <label for="" style="color: white;"><b>Property Type</b></label>
+            </div>
+
+            <!-- cascade antDesign -->
+             <div class="cascade_div">
+               <nz-cascader
+               class="form-control w-100"
+               [nzExpandTrigger]="'hover'"
+               [nzOptions]="nzOptions"
+               [(ngModel)]="values"
+               (ngModelChange)="typeChanges($event)"
+               ></nz-cascader>
+              </div>
+          </div>
+          </div>
+    <div class="row">
+<!-- price dropdown -->
+
+<div class="filter_div col-md-3" >
+  <div id="">
+    <div id="price_min" class=" d-flex" style="background-color:transparent;">
+      <div class=" w-100 mb-3" style="padding-right: 15px;margin-right:10px;">
+          <label for="minPrice" style="color: white;"><b>Price Min:</b></label>
+          <div class="dropdown">
+            <div class=" form-control form-select w-100" id="minPrice" name="minPrice" data-bs-toggle="dropdown" aria-expanded="false">{{minPriceValue}}</div>
+            <ul class="dropdown-menu price-menu">
+              <li class="dropdown-item"  *ngFor="let min of filterMinPrice" (click)="maxUpdate($event)" value="{{min.value}}" >{{min.value}}</li>
+            </ul>
+          </div>
+          <!-- <select class="form-control form-select" id="minPrice" (change)="maxUpdate($event)" name="minPrice" >
+            <option value="">Select</option>
+              <option *ngFor="let min of filterMinPrice" value="{{min.value}}">{{min.value}}</option>
+          </select> -->
+      </div>
+      <div class=" filter_div w-100 mb-3" style="padding-left: 15px;">
+          <label for="maxPrice"style="color: white;"><b>Price Max:</b></label>
+          <div class="dropdown">
+            <div class=" form-control form-select w-100" id="maxPrice" name="maxPrice" data-bs-toggle="dropdown" aria-expanded="false">{{maxPriceValue}}</div>
+            <ul class="dropdown-menu price-menu">
+              <li class="dropdown-item"  *ngFor="let max of filterMaxPrice" (click)="minUpdate($event)" value="{{max.value}}" >{{max.value}}</li>
+            </ul>
+          </div>
+          <!-- <select class="form-control w-100 form-select" (change)="minUpdate($event)" id="maxPrice" name="maxPrice">
+            <div style="max-height: 250px;">
+              <option value="">Select</option>
+              <option style="border: 2px solid black;" *ngFor="let max of filterMaxPrice" value="{{max.value}}" >{{max.value}}</option>
+            </div>
+          </select> -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- area range drop down -->
+<div class="filter_div col-md-3">
+  <div class="label">
+      <label for="areaRange" style="color: white;"><b>Area Marla to Kanal</b></label>
+      <div class="dropdown">
+        <div class=" form-control form-select w-100" id="maxPrice" name="maxPrice" data-bs-toggle="dropdown" aria-expanded="false">{{selectedAreaSize}}</div>
+        <ul class="dropdown-menu price-menu" id="areaRange">
+          <li class="dropdown-item" (click)="selectedArea($event)" value="1Marla">1 Marla</li>
+          <li class="dropdown-item" (click)="selectedArea($event)" value="2 Marla">2 Marla</li>
+          <li class="dropdown-item" (click)="selectedArea($event)" value="3 Marla">3 Marla</li>
+          <li class="dropdown-item" (click)="selectedArea($event)" value="4 Marla">4 Marla</li>
+          <li class="dropdown-item" (click)="selectedArea($event)" value="5 Marla">5 Marla</li>
+          <li class="dropdown-item" (click)="selectedArea($event)" value="6 Marla">6 Marla</li>
+          <li class="dropdown-item" (click)="selectedArea($event)" value="7 Marla">7 Marla</li>
+          <li class="dropdown-item" (click)="selectedArea($event)" value="8 Marla">8 Marla</li>
+          <li class="dropdown-item" (click)="selectedArea($event)" value="9 Marla">9 Marla</li>
+          <li class="dropdown-item" (click)="selectedArea($event)" value="10 Marla">10 Marla</li>
+     <hr>
+          <li class="dropdown-item" (click)="selectedArea($event)" value="2 Marla">2 Kanal</li>
+          <li class="dropdown-item" (click)="selectedArea($event)" value="4 Kanal">4 Kanal</li>
+          <li class="dropdown-item" (click)="selectedArea($event)" value="6 Kanal">6 Kanal</li>
+          <li class="dropdown-item" (click)=" selectedArea($event)" value="8 Kanal">8 Kanal</li>
+          <li class="dropdown-item" (click)="selectedArea($event)" value="10 Kanal">10 Kanal</li>
+          
+        </ul>
+      </div>
+  </div>
+</div>
+<div class="filter_div col-md-3">
+  <div class="label_area">
+      <label for="min-area" style="color: white;"><b>Area</b></label>
+      <input type="text" class="w-100 form-control" placeholder="Enter Value" >
+  </div>
+</div>
+<!-- bed rooms drop down -->
+<div id="home_opt" class="col-md-3 d-flex" style="background-color:transparent;">
+  <div class="filter_div w-100 mb-3" style="padding-right: 15px;">
+      <label for="bedrooms" style="color: white;"><b>Beds</b></label>
+      <select class="form-control form-select" id="bedrooms" name="roomNo">
+        <option value="">Select</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10+</option>
+      </select>
+  </div>
+  <div class=" filter_div w-100 mb-3" style="padding-left: 15px;">
+      <label for="bathrooms"style="color: white;"><b>Baths</b></label>
+      <select class="form-control form-select" id="bathrooms" name="broomNo">
+        <option value="">Select</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5+</option>
+      </select>
+  </div>
+</div>
+</div>
+</div>
+
+
+<div class="section">
+    <div class="main" >
+        <div class="row listing-row">
+         <!-- Left Column (Section for Ads) -->
+          <div class="col-12 col-md-8" style="margin-left: 50px;">
+          <div class="container">            
+                <div class="show-property">
+                  <div>
+                    <div class="card my-4" *ngFor="let property of buy_list" (click)="viewProperty(property._id)" >
+                      <div class="d-flex">
+                          <div class="image-container  w-50">
+                            <span class="px-2 bg-danger text-light hot">HOT</span>
+                          <img class="card-img-top  w-100" src="{{property.property_img}}" alt="Card image cap">
+                          <div class="icon-text">
+                            <i class="fa fa-camera"></i> <span  class="mr-2 ms-1">28</span>
+                        </div>
+  
+                          <div class="icon-container">
+                            <button class="icon-btn">
+                              <i class="fa fa-heart"></i>
+                            </button>
+                            <button class="icon-btn">
+                              <i class="fa fa-share"></i>
+                            </button>
+                            <button class="icon-btn">
+                              <i class="fa fa-location-arrow"></i>
+                            </button>
+                          </div>
+                        </div>
+                        
+                        <div class="row_class w-50">
+                          <!-- Card Body Section -->
+                          <div class="card-body">
+                            <h5>Rs: {{property.price}}</h5>
+                            <h6>{{property.location}}</h6>
+                            <p><strong>Property Details:</strong></p>
+                            <p>
+                                <i class="fa fa-bed"></i> {{property.no_of_bedroom}} Beds
+                                <i class="fa fa-shower" style="margin-left: 10px;"></i> {{property.no_of_bath}} Baths
+                                <i class="fa fa-ruler-vertical" style="margin-left: 10px;"></i> {{property.area_size}} {{property.area_unit}}
+                            </p>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p>Property owner details</p>
+                        </div>
+                        
+                      
+                          <!-- Buttons Section Below Content -->
+                          <div class="btn-container p-9">
+                              <a href="mailto:example@example.com" class="btn btn-outline-success">
+                                  <i class="fas fa-envelope"></i>
+                              </a>
+                              <a href="https://wa.me/{{property.phone}}" target="_blank" class="btn btn-outline-success">
+                                  <i class="fab fa-whatsapp"></i> WhatsApp
+                              </a>
+                              <a href="tel:+1234567890" class="btn btn-green">
+                                  <i class="fas fa-phone-alt"></i> CALL
+                              </a>
+                          </div>
+                      </div>
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+          </div>
+            <div class="col-12 col-md-3">
+              <section class="ads-section" >
+                  <h5 class="text-center">Section for Ads</h5>
+              </section>
+          </div>
+          </div>
+        </div>
+</div>

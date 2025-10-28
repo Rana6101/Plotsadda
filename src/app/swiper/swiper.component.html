@@ -4,7 +4,7 @@
         <div class="card1 mx-2" (click)="viewProject(project._id)"  data-aos="flip-right" data-aos-duration="2000">
             <div class="img-holder">
               <span *ngIf="project.mark_as_hot" class="px-2 bg-danger text-light hot">HOT</span>
-              <img src="{{project.project_pic_file}}" class="card-img-top" alt="...">
+              <img [src]="IMG_BASE_URL + '/project/file/pic/' + project.project_pic[0]" class="card-img-top" alt="...">
             </div>
             <div class="card-body">
               <div class="title price-range">{{project.project_cost}}</div>

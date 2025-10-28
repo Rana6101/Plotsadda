@@ -11,11 +11,11 @@
     width: 300px;
     height: 300px;
 }
-.show-property{
+/* .show-property{
     max-height: 70vh;
     overflow-y: scroll;
     scroll-behavior: smooth;
-} 
+}  */
 .city-menu{
     max-height: 50vh;
     overflow-y: scroll;
@@ -97,10 +97,13 @@
     margin-bottom: 10px;
     margin-left: 10px;
 }
+.card-img-top{
+    height: 100%;
+}
 .ads-section {
     border: 1px solid #000; /* Adds a black border around the section */
     padding: 15px; /* Adds padding inside the section */
-    margin-top: 50px; /* Adds 50px margin on top */
+    margin-top: 25px; /* Adds 50px margin on top */
     margin-bottom: 50px; /* Adds 50px margin at the bottom */
     height: 500px;
 }.image-container {
@@ -155,6 +158,7 @@
     color: white;
     padding: 5px 10px;
     display: flex;
+    position: sticky;
     flex-direction: column;
     gap: 10px; /* Spacing between rows */
     /* position: fixed; */

@@ -6,6 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DashboarServiceService {
   BASE_URL='http://localhost:3000';
+  IMG_BASE_URL='http://localhost:3000/blog/file/'
 
   constructor(private _http:HttpClient) { }
 
@@ -51,6 +52,11 @@ export class DashboarServiceService {
   postInquery(data:any){
     let inquery_url = this.BASE_URL + "/inquery"
     return this._http.post(inquery_url,data)
+  }
+
+  getInquery(){
+    let inquery_url = this.BASE_URL + "/inquery"
+    return this._http.get(inquery_url)
   }
 
 

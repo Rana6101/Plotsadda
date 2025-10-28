@@ -27,7 +27,7 @@ export class ContactComponent {
   })
   sendQuery(){
     if(this.messageForm.valid){
-      this._service.postMessage(this.messageForm.value).subscribe((data)=>
+      this._service.postMessage(this.messageForm.value).subscribe((data:any)=>
       {
         console.log(data)
         this.messageForm.reset();

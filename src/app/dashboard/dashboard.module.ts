@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
@@ -12,9 +12,11 @@ import { PanelComponent } from './panel/panel.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { ProjectUploadingComponent } from './project-uploading/project-uploading.component';
+import { QuillModule } from 'ngx-quill'
 
 
-@NgModule({ declarations: [
+@NgModule({ 
+    declarations: [
         DashboardComponent,
         ListingComponent,
         SettingComponent,
@@ -23,8 +25,19 @@ import { ProjectUploadingComponent } from './project-uploading/project-uploading
         SidebarComponent,
         PanelComponent,
         ProjectUploadingComponent
-    ], imports: [CommonModule,
+    ], 
+    imports: [
+        CommonModule,
         DashboardRoutingModule,
         FormsModule,
-        ReactiveFormsModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
+        QuillModule.forRoot(),
+        ReactiveFormsModule
+    ], 
+    providers: [
+        provideHttpClient(withInterceptorsFromDi())
+    ],
+    schemas:[
+        CUSTOM_ELEMENTS_SCHEMA
+    ]
+     })
 export class DashboardModule { }

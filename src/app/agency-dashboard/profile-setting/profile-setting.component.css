@@ -1,0 +1,20 @@
+
+.setting{
+    background: #F4F5F7;
+}
+.banner{
+    height: 45vh;
+    background: url('../../../assets/AgencyCreateTeam.jpg');
+    background-repeat: round;
+}
+.user{
+    background: white ;
+    border-radius: 25px;
+}
+.user .user-profile-pic{
+    /* border-radius: 50%; */
+    align-items: center;
+    width: 100px;
+    height: 95px;
+    margin: 40px auto;
+}

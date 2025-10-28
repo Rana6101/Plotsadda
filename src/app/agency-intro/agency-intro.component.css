@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+.banner{
+    height: 500px;
+    background: url('../../assets/agency_intro.jpg');
+    /* background: url('../../assets/real_estate_isometric_illustration-06.jpg'); */
+    background-repeat: round;
+}
+.main{
+    background: #F9F9FB;
+}
+h1, h2{
+    font-family: 'Playfair Display';
+    font-weight: bolder;
+    text-decoration: underline;
+}
+p, ol li{
+    font-family: 'lato';
+    font-size: 18px;
+    text-align: justify;
+
+}
+.thanks_sec{
+    height: 350px;
+}
+.thanks_text{
+    margin-top: 50px;
+}
+.btn-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.btn-container-first{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.btn-green{
+    background: #004623;
+    color: #fafafa;
+}
+.sec_img{
+    border: 5px solid black;
+}
+
+ol li::marker {
+
+   font-weight: bold;
+}
+
+
+
+
+@media only screen and (min-width: 600px) and (max-width:1024px) {
+
+    .banner{
+        height: 350px;
+    }
+}
+@media only screen and (max-width: 600px) {
+
+    .banner{
+        height: 250px;
+    }
+}

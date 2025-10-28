@@ -53,15 +53,25 @@
                             </a>
                         </li>
                         <li class="nav-item mx-2">
+                            <a (click)="agent()" routerLink='./blog' class="nav-link">
+                                <span>Blogs</span>
+                            </a>
+                        </li>
+                        <li class="nav-item mx-2">
                             <a (click)="nonAgent()" routerLink='./advertise' class="nav-link">
                                 <span>Advertise</span>
+                            </a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a (click)="nonAgent()" routerLink='./agency' class="nav-link">
+                                <span>Agency</span>
                             </a>
                         </li>
                         <li class="nav-item mx-2 px-2">
                             <button class=" btn btn-light" *ngIf="!loginStatus" routerLink="login">Login</button>
                             <div class="dropdown mx-2" id="profile_box" *ngIf="loginStatus">
                                 <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                                  <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                                  <img src="{{IMG_BASE_URL + LoginData.profile_pic}}" alt="" width="32" height="32" class="rounded-circle me-2">
                                   <strong>{{LoginData.name}}</strong>
                                 </a>
                                 <ul class="dropdown-menu-header dropdown-menu text-small shadow" style="right:0" aria-labelledby="dropdownUser1">

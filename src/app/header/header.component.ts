@@ -12,9 +12,10 @@ export class HeaderComponent {
   routeData:any;
   loginStatus:any=false;
   LoginData:any;
+  IMG_BASE_URL=this._service.IMG_BASE_URL
   constructor(private _service:AuthServiceService, private _router:Router){  
      console.log(this._service.isLoggedIn())
-     this._service.loginUser.subscribe(data=>{
+     this._service.loginUser.subscribe((data:any)=>{
       this.loginStatus = data;
       console.log(data)
      })

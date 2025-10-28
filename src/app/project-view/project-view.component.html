@@ -3,7 +3,7 @@
         <div class="intro">
             <div class="d-flex">
                 <div class="col-8 pt-3">
-                    <h1 class="mb-0">{{projectDetail.project_title}}</h1>
+                    <h1 class="mb-0">{{projectDetail.project_title || ''}}</h1>
                     <p>{{projectDetail.project_location}}</p>
                 </div>
                 <div class="col-4 pt-4">
@@ -17,11 +17,14 @@
         <div class="img_section">
             <div class="d-flex">
                 <div class="col-8 p-2">
-                    <img class="w-100 proj-main-img" src="{{projectDetail.project_pic_file}}" alt="">
+                    <img class="w-100 proj-main-img" [src]="BASE_URL + '/project/file/pic/' + projectDetail.project_pic[0]"
+                    (click)="openLightbox(0, BASE_URL + '/project/file/pic/' + projectDetail.project_pic[0])" alt="">
                 </div>
                 <div class="col-4">
-                    <img class="w-100 m-2 proj-side-img" src="../../assets/3.jpeg" alt="">
-                    <img class="w-100 m-2 proj-side-img" src="../../assets/3.jpeg" alt="">
+                    <img class="w-100 m-2 proj-side-img" [src]="BASE_URL + '/project/file/pic/' + projectDetail.project_pic[1]"
+                    (click)="openLightbox(1, BASE_URL + '/project/file/pic/' + projectDetail.project_pic[1])" alt="">
+                    <img class="w-100 m-2 proj-side-img" [src]="BASE_URL + '/project/file/pic/' + projectDetail.project_pic[2]" 
+                    (click)="openLightbox(2, BASE_URL + '/project/file/pic/' + projectDetail.project_pic[2])" alt="">
                 </div>
             </div>
         </div>
@@ -51,26 +54,31 @@
                             <hr> 
                             <div class="description" >
                                 <h3>Description</h3>
-                                <p>{{projectDetail.project_des}}</p>
+                                <div [innerHTML]='projectDetail.project_des'></div>
+                                <!-- <p>{{projectDetail.project_des}}</p> -->
                                 <hr>
                             </div>
                             <div class="payment_plan">
                                 <h3>Payment Plan</h3>
-                                <div class="sec1">
-                                  <img src="../../assets/payment-plan.jpeg" alt="">
+                                <div class="sec1 payment_plan_sec">
+                                    <span class="bg-light m-4 payment_span">
+                                        <img [src]="BASE_URL + '/project/file/payment_plan/' + projectDetail.project_payment_plan[0]" 
+                                        (click)="openLightbox(3, BASE_URL + '/project/file/payment_plan/' + projectDetail.project_payment_plan[0])" alt="">
+                                    </span>
                                 </div>
-                                <div class="sec1">
+                                <!-- <div class="sec1">
                                     <img src="../../assets/payment-plan-2.jpeg" alt="">
                                 </div>
                                 <div class="sec1">
                                     <img src="../../assets/payment-plan-3.jpeg" alt="">
-                                </div>
-                                <hr>
+                                </div> -->
                             </div>
                             <div class="project_map">
+                                <hr>
                                 <h3>Project Map</h3>
                                 <div class="sec1">
-                                  <img src="../../assets/project-map.jpg" alt="">
+                                  <img [src]="BASE_URL + '/project/file/map/' + projectDetail.project_map[0]" 
+                                  (click)="openLightbox(4,BASE_URL + '/project/file/map/' + projectDetail.project_map[0])" alt="">
                                 </div>
                             </div>
                         </div>
@@ -148,3 +156,9 @@
         </div>
     </div>
 </div>
+
+<app-lightbox
+  [images]="photos"
+  [open]="lightboxOpen"
+  [initialIndex]="selectedIndex"
+></app-lightbox>

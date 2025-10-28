@@ -4,10 +4,11 @@
 .search-wrapper{
     margin: auto;
     width: 70%;
-    background-color: rgba(46, 46, 46, 0.507);
+    /* background-color: rgba(46, 46, 46, 0.507); */
+    background-color: #00462391;
   }
   .search-wrapper:hover{
-    background-color: rgba(12, 12, 12, 0.507);
+    /* background-color: rgba(12, 12, 12, 0.507); */
   }
   .search-container {
     height: 100vh; /* Ensure it takes the full screen height */
@@ -65,7 +66,7 @@
     justify-content: center;
   }
   .section-two button {
-    background: rgb(18, 101, 18);
+    background: #004623;
   }
   .section-two .txt{
     margin: auto;
@@ -80,6 +81,12 @@
 .card{
 box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 border-radius: 50px;
+/* --bs-body-bg: #004623; */
+/* color: #fafafa; */
+}
+.card-title h3{
+  /* color: #fafafa; */
+  text-transform:uppercase;
 }
 .card-content{
   text-align: center;
@@ -111,6 +118,10 @@ border-radius: 50px;
   }
 .slider{
   padding: 35px;
+}
+.green-btn{
+  background: #004623;
+  color: #fafafa;
 }
     /* Custom styling for tabs */
     .custom-tabs .nav-link {

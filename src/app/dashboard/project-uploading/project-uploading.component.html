@@ -73,7 +73,7 @@
                   <div class="col-12 p-0 px-md-4 px-lg-4 py-md-2 py-lg-2">
                       <div><label for="">Feature Image</label></div>
                       <div class="d-flex">
-                        <input type="file" (change)="onUploadChange($event)" accept=".png, .jpg, .jpeg, .pdf" formControlName="project_pic" class="form-control w-100 p-2">
+                        <input type="file" multiple (change)="onFileSelected($event)" accept=".png, .jpg, .jpeg, .pdf" name="project_pic" class="form-control w-100 p-2">
                       </div>
                   </div>
               </div>
@@ -81,7 +81,7 @@
                 <div class="col-12 p-0 px-md-4 px-lg-4 py-md-2 py-lg-2">
                     <div><label for="">Payment Plan Image</label></div>
                     <div class="d-flex">
-                      <input type="file"  accept=".png, .jpg, .jpeg, .pdf" formControlName="" class="form-control w-100 p-2">
+                      <input type="file"  accept=".png, .jpg, .jpeg, .pdf" (change)='onPlanSelected($event)' name="project_payment_plan" class="form-control w-100 p-2">
                     </div>
                 </div>
             </div>
@@ -89,19 +89,21 @@
               <div class="col-12 p-0 px-md-4 px-lg-4 py-md-2 py-lg-2">
                   <div><label for="">Map Image</label></div>
                   <div class="d-flex">
-                    <input type="file"  accept=".png, .jpg, .jpeg, .pdf" formControlName="" class="form-control w-100 p-2">
+                    <input type="file"  accept=".png, .jpg, .jpeg, .pdf" (change)='onMapSelected($event)' name="project_map" class="form-control w-100 p-2">
                   </div>
               </div>
           </div>
                 <div class="d-flex ">
                   <div class="col-12 p-0 px-md-4 px-lg-4 py-md-2 py-lg-2">
                       <div><label for="">Description</label></div>
-                      <div><textarea name="" formControlName="project_des" class="w-100 p-2 form-control" id=""></textarea></div>
+                      <div>
+                        <quill-editor formControlName="project_des" #editor [modules]="modules" (contentChanged)="logChange($event);"></quill-editor>  
+                      </div>
                   </div>
               </div>
               <div class="px-4">
 
-                <button class="btn w-100 btn-primary p-2" (click)="addProject()">Upload</button>
+                <button class="btn w-100 btn-primary p-2" style="margin-top: 45px;" (click)="addProject()">Upload</button>
               </div>
             </div>
           </form>

@@ -19,7 +19,7 @@ export class PropertyViewComponent {
     ) {
       const id = this.route.snapshot.paramMap.get('id');
       console.log(this.route.snapshot.paramMap.get('id'))
-      this._service.getProperty(id).subscribe(data => {
+      this._service.getProperty(id).subscribe((data:any) => {
         console.log(data)
         this.propertyDetail = data;
         this.propertyDetail = this.propertyDetail.data
@@ -27,6 +27,22 @@ export class PropertyViewComponent {
       });
      }
 
+     BASE_URL = this._service.BASE_URL
+     lightboxOpen = false;
+     selectedIndex = 0;
+     photos:any
+     imgArray:any =[]
+   
+     openLightbox(i: number, url:any) {
+       this.lightboxOpen = false
+       this.propertyDetail.property_img.forEach((element:any) => {
+        this.imgArray.push(this.BASE_URL + '/listing/file/' + element)
+       });
+       this.selectedIndex = i;
+       this.photos = this.imgArray
+       console.log(this.imgArray)
+       this.lightboxOpen = true;
+     }
      queryForm:FormGroup = this._fb.group({
       property_id:['',Validators.required],
       property_no:['',Validators.required],
@@ -40,7 +56,7 @@ export class PropertyViewComponent {
      sendQuery(){
       this.queryForm.patchValue({property_id:this.propertyDetail._id,property_no:'10003'})
       if(this.queryForm.valid){
-        this._service.postInquery(this.queryForm.value).subscribe(data=>{
+        this._service.postInquery(this.queryForm.value).subscribe((data:any)=>{
           alert("Your Message send Successfully!!! your team will be contact you soon!!")
           this.queryForm.reset();
           console.log(data)

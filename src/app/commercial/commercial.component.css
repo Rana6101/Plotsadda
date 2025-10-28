@@ -1,0 +1,169 @@
+.ant-select-selector{
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+    border: none;
+}
+.card img{
+    width: 300px;
+    height: 300px;
+}
+.show-property{
+    max-height: 70vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+} 
+.city-menu{
+    max-height: 50vh;
+    overflow-y: scroll;
+    width: 100%;
+}
+.btn-green{
+    background: #004623;
+    color:#fafafa;
+}
+.price-menu{
+    max-height: 30vh;
+    overflow-y: scroll;
+    width: 100%;
+}
+/* #city-select{
+    height: 100px;
+} */
+
+/* Styling for the card image */
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover; /* Ensures the image covers the card area */
+    border-radius: 8px;
+}
+
+.row_class {
+    display: flex;
+    flex-direction: column;  
+     /* To position the button container relative to this div */
+}
+/* Card container styling */
+.card-body {
+    padding: 20px;
+    /* flex-grow: 1; */
+    background-color: antiquewhite;
+}
+
+/* Price box styling */
+.card-body h5 {
+    font-weight: bold;
+    color: #2e8b57; /* More subdued green for better readability */
+    font-size: 1.25rem; /* Slightly larger font */
+    margin-bottom: 10px;
+}
+
+/* Text styling inside the card */
+.card-body p {
+    font-size: 1rem;
+    color: #555; /* A subtle dark gray color for better text contrast */
+    line-height: 1.5; /* Improved line spacing */
+}
+
+/* Property details heading */
+.card-body p:first-of-type {
+    font-weight: bold;
+    color: #333;
+    margin-top: 15px;
+}
+
+/* Card hover effect */
+.card:hover {
+    box-shadow: 0 4px 15px rgba(8, 153, 64, 0.5); /* Optional shadow effect on hover */
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    transform: scale(1.02);
+    transition: transform 0.5s ease;
+}
+
+/* General styling for text */
+.card-body h5, .card-body p {
+    margin: 0;
+    padding: 0;
+}
+.btn-container{
+    background: antiquewhite;
+
+}
+.btn-container a {
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+.ads-section {
+    border: 1px solid #000; /* Adds a black border around the section */
+    padding: 15px; /* Adds padding inside the section */
+    margin-top: 50px; /* Adds 50px margin on top */
+    margin-bottom: 50px; /* Adds 50px margin at the bottom */
+    height: 500px;
+}.image-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .icon-container {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    gap: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .icon-btn {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+  }
+  .icon-text {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+.hot{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+  .icon-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);  /* Slightly darker on hover */
+  }
+  
+  .icon-btn i {
+    font-size: 20px;
+  }
+
+.content-container1 {
+     /* Solid black background */
+    color: white;
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Spacing between rows */
+    /* position: fixed; */
+   margin-top:0px; /* Adjust this value as needed to set it below the header */
+    left: 0;
+    width: 100%;
+    z-index: 999; /* Keeps it on top of other content */
+}
+
+.ant-cascader-menu{
+    min-width: 165px;
+}

@@ -1,8 +1,11 @@
-table{
+/* table{
     --bs-table-height: 30vh;
     overflow-y: scroll;
-}
-.table_container{
+} */
+/* .table_container{
     height: 30vh;
     overflow-y: scroll;
+} */
+.agencyProfilePic{
+    width: 50px;
 }

@@ -15,17 +15,17 @@
           <i class="nav-icon cil-speedometer .text-light"><img class=" side-icon" src="../../../assets/property-uploading.png" alt=""></i> Property Listing
         </a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" *ngIf="loginData.role == 'admin'">
         <a class="nav-link" routerLink="blog_posting">
           <i class="nav-icon cil-speedometer .text-light"><img class=" side-icon" src="../../../assets/blog-posting.png" alt=""></i> Blog Posting
         </a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" *ngIf="loginData.role == 'admin'">
         <a class="nav-link" routerLink="project_upload">
           <i class="nav-icon cil-speedometer .text-light"><img class=" side-icon" src="../../../assets/project-upload.png" alt=""></i> Project Upload
         </a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" *ngIf="loginData.role == 'admin'">
         <a class="nav-link" routerLink="admin_control">
           <i class="nav-icon cil-speedometer .text-light"><img class=" side-icon" src="../../../assets/admin-control.png" alt=""></i> Admin Control
         </a>

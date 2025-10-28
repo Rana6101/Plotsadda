@@ -12,5 +12,6 @@ export class SettingComponent {
     this.userData = this._service.loginUser.value
     this.userData = JSON.parse(this.userData)
   }
+  IMG_BASE_URL=this._service.IMG_BASE_URL
   cityList:any=this._service.city_list
 }

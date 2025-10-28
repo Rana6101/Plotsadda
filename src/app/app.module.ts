@@ -1,6 +1,5 @@
 import { NgModule ,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
@@ -31,10 +30,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BlogViewComponent } from './blog-view/blog-view.component';
 import { PropertyViewComponent } from './property-view/property-view.component';
 import { ProjectViewComponent } from './project-view/project-view.component';
-import { DocumentEditorModule } from '@txtextcontrol/tx-ng-document-editor';
-import { DocumentViewerModule } from '@txtextcontrol/tx-ng-document-viewer';
-
-
+// import { DocumentEditorModule } from '@txtextcontrol/tx-ng-document-editor';
+// import { DocumentViewerModule } from '@txtextcontrol/tx-ng-document-viewer';
+import { NzSelectArrowComponent, NzSelectModule } from 'ng-zorro-antd/select';
+import { QuillModule } from 'ngx-quill'
+import { LightboxComponent } from './dashboard/lightbox/lightbox.component';
+import { AgencyIntroComponent } from './agency-intro/agency-intro.component';
+import { AgencyLoginComponent } from './agency-login/agency-login.component';
 registerLocaleData(en);
 
 @NgModule({ declarations: [
@@ -57,19 +59,28 @@ registerLocaleData(en);
         LoginComponent,
         BlogViewComponent,
         PropertyViewComponent,
-        ProjectViewComponent
+        ProjectViewComponent,
+        LightboxComponent,
+        AgencyIntroComponent,
+        AgencyLoginComponent
     ],
     bootstrap: [AppComponent],
-    schemas: [CUSTOM_ELEMENTS_SCHEMA], imports: [BrowserModule,
+    schemas: [CUSTOM_ELEMENTS_SCHEMA], 
+    imports: [BrowserModule,
         AppRoutingModule,
         SwiperComponent,
         ReactiveFormsModule,
         NzCascaderModule,
         FormsModule,
         BrowserAnimationsModule,
-        DocumentEditorModule,
-        DocumentViewerModule], providers: [
+        NzSelectModule,
+        QuillModule
+        // DocumentEditorModule,
+        // DocumentViewerModule],
+    ],
+        providers: [
         { provide: NZ_I18N, useValue: en_US },
         provideHttpClient(withInterceptorsFromDi())
-    ] })
+        ]
+ })
 export class AppModule { }

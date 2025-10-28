@@ -1,9 +1,40 @@
 <div class=" col-12 ">
     <div class="container_fluid">
        <h1 class=" p-4">Welcome User</h1>
+       <div class="col-12 px-4 table_container">
+        <h3 class="text-center m-4">Agency Registration Request</h3>
+        <table  class="vh-30 table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Sr#</th>
+                <th scope="col">Profile</th>
+                <th scope="col">Name</th>
+                <th scope="col">ID</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Status</th>
+                <th scope="col">Approve</th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let agency of agencyDetail; let i = index">
+                <th scope="row">{{i+1}}</th>
+                <td><img class="agencyProfilePic" [src]="BASE_URL + '/file/' + agency.profilePic" alt=""></td>
+                <td>{{agency.agencyName}}</td>
+                <td>{{agency._id}}</td>
+                <td>{{agency.email}}</td>
+                <td>{{agency.phone || '-------'}}</td>
+                <td>{{agency.status}}</td>
+                <td><button class="btn btn-success text-white">OK</button></td>
+                <td><button class="btn btn-danger text-white">Reject</button></td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
      <div class="col-12 px-4 table_container">
-       <h5>Public User Details</h5>
-       <table style="height:30vh" class="vh-30 table table-hover">
+       <h3 class="text-center m-4">Public User Details</h3>
+       <table  class="vh-30 table table-hover">
            <thead>
              <tr>
                <th scope="col">Sr#</th>
@@ -14,18 +45,18 @@
              </tr>
            </thead>
            <tbody>
-             <tr *ngFor="let user of userRole">
-               <th scope="row">{{userIndex}}</th>
+             <tr *ngFor="let user of userRole; let i = index">
+               <th scope="row">{{i+1}}</th>
                <td>{{user.name}}</td>
                <td>{{user.role}}</td>
                <td>{{user.email}}</td>
-               <td>{{user.phone || 0300-0000000}}</td>
+               <td>{{user.phone || '-------'}}</td>
              </tr>
            </tbody>
          </table>
      </div>
      <div class="col-12 px-4 table_container" >
-       <h5>Agents Details</h5>
+       <h3 class="text-center m-4">Agents Details</h3>
        <table class="table table-hover">
            <thead>
              <tr>
@@ -38,39 +69,24 @@
              </tr>
            </thead>
            <tbody>
-             <tr *ngFor="let agent of agentRole">
-               <th scope="row">1</th>
+             <tr *ngFor="let agent of agentRole;let i = index">
+               <th scope="row">{{i+1}}</th>
                <td>{{agent.name}}</td>
                <td>{{agent.role}}</td>
                <td>{{agent.city}}</td>
                <td>{{agent.email}}</td>
                <td>{{agent.phone}}</td>
              </tr>
-             <tr>
-               <th scope="row">2</th>
-               <td>Jacob</td>
-               <td>Agent</td>
-               <td>lsyd</td>
-               <td>example&#64;email.com</td>
-               <td>0300-0000000</td>
-             </tr>
-             <tr>
-               <th scope="row">3</th>
-               <td>acob</td>
-               <td>Agent</td>
-               <td>layyah</td>
-               <td>example&#64;email.com</td>
-               <td>0300-0000000</td>
-             </tr>
            </tbody>
          </table>
      </div>
 
      <div class="col-12 px-4 table_container">
-      <h5>Message Details</h5>
+      <h3 class="text-center m-4">Message Details (Contact Page)</h3>
       <table class="table table-hover">
           <thead>
             <tr>
+              <th scope="col">Sr</th>
               <th scope="col">Name</th>
               <th scope="col">Phone</th>
               <th scope="col">Email</th>
@@ -80,13 +96,44 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let message of messageList">
+            <tr *ngFor="let message of messageList; let i = index">
+              <td>{{i+1}}</td>
               <td>{{message.user_name}}</td>
               <td>{{message.phone}}</td>
               <td>{{message.email}}</td>
               <td>{{message.city}}</td>
               <td>{{message.subject}}</td>
               <td>{{message.message}}</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+
+
+    
+    <div class="col-12 px-4 table_container">
+      <h3 class="text-center m-4">Property Query</h3>
+      <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Sr</th>
+              <th scope="col">Name</th>
+              <th scope="col">Phone</th>
+              <th scope="col">Email</th>
+              <th scope="col">Message</th>
+              <th scope="col">Property No.</th>
+              <th scope="col">Property ID</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let query of propertyQuery; let i = index">
+              <td>{{i+1}}</td>
+              <td>{{query.user_name}}</td>
+              <td>{{query.phone}}</td>
+              <td>{{query.email}}</td>
+              <td>{{query.message}}</td>
+              <td>{{query.property_no}}</td>
+              <td>{{query.property_id}}</td>
             </tr>
           </tbody>
         </table>

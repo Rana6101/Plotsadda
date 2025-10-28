@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { BehaviorSubject, elementAt } from 'rxjs';
+import {BehaviorSubject} from 'rxjs'
 
 @Injectable({
   providedIn: 'root'
@@ -23,6 +23,8 @@ export class AuthServiceService {
   }
 
   BASE_URL='http://localhost:3000';
+  IMG_BASE_URL='http://localhost:3000/blog/file/';
+  PRO_BASE_URL='http://localhost:3000/profile_pic/file/';
   isAgent = new BehaviorSubject<any>(false);
 
   constructor(private _http:HttpClient) { }
@@ -35,8 +37,20 @@ export class AuthServiceService {
     let url = this.BASE_URL+"/register";
     return this._http.post(url, data);
   }
+  agencyLogin(data:any){
+    let url = this.BASE_URL + "/agency_login";
+    return this._http.post(url, data);
+  }
+  agencyRegister(data:any){
+    let url = this.BASE_URL+"/agency_register";
+    return this._http.post(url, data);
+  }
   getAllUser(){
     let url = this.BASE_URL + "/users"
+    return this._http.get(url);
+  }
+  getAgency(){
+    let url = this.BASE_URL + "/agencys"
     return this._http.get(url);
   }
 

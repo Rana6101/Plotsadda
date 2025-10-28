@@ -1,0 +1,22 @@
+<div class="overlay" *ngIf="open" (click)="close()">
+    <div class="modal" (click)="$event.stopPropagation()">
+  
+      <!-- Close button -->
+      <button class="close-btn" (click)="close()">✕</button>
+  
+      <!-- Prev button -->
+      <button class="nav-btn left" (click)="prev()">❮</button>
+  
+      <!-- Next button -->
+      <button class="nav-btn right" (click)="next()">❯</button>
+  
+      <!-- Image -->
+      <img [src]="images[index]" style=" max-height:85vh" [alt]="'Image ' + (index+1)" />
+  
+      <!-- Counter -->
+      <div class="counter">
+        {{ index + 1 }} / {{ images.length }}
+      </div>
+    </div>
+  </div>
+  

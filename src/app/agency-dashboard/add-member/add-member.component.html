@@ -1,0 +1,117 @@
+<div id="setting" class="setting col-12 " >
+    <div class="container_fluid">
+        <div class="banner text-center">
+            <!-- <h1>About Us</h1>  -->
+        </div>
+
+       <div class="2nd-section my-4 d-flex">
+           <div class="col-1"></div>
+           <div class="user col-10 container p-4">
+            <div class="col-12 d-flex pt-4" style="align-items: center;justify-content: center;">
+                <img class="user-profile-pic " src="../../../assets/profile-logo.png" alt="">
+                <!-- <img class="user-profile-pic " src="{{IMG_BASE_URL + userData.profile_pic}}" alt=""> -->
+            </div>
+               <div class="col-12">
+                <p>Note: Add and manage yor agency's team members here. enter their basic details, assign role and desinations. Each team member will get their own profile to help manage properties, leads, and agency activities more efficiently. </p>
+                   <p>Additional Infomation</p>
+                   <div class="form container p-0 px-md-4 px-lg-4">
+                       <form action="">
+                           <div class="d-block d-md-flex d-lg-flex">
+                               <div class="col-12 col-md-6 col-lg-6 px-1 px-md-4 px-lg-4">
+                                   <div><label for="">Name</label></div>
+                                   <div><input type="text" value="{{userData.name}}" class="w-100 p-2 form-control"></div>
+                               </div>
+                               <div class="col-12 col-md-6 col-lg-6 px-1 px-md-4 px-lg-4">
+                                   <div><label for="">Email</label></div>
+                                   <div><input type="email" disabled value="{{userData.email}}" class="w-100 p-2 form-control"></div>
+                               </div>
+                           </div>
+                           <div class="d-block d-md-flex d-lg-flex">
+                            <div class="col-12 col-md-6 col-lg-6 px-1 px-md-4 px-lg-4">
+                                <div><label for="">Password</label></div>
+                                <div><input type="password" value="{{userData.name}}" class="w-100 p-2 form-control"></div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-6 px-1 px-md-4 px-lg-4">
+                                <div><label for="">Confirm Password</label></div>
+                                <div><input type="password" disabled value="{{userData.email}}" class="w-100 p-2 form-control"></div>
+                            </div>
+                        </div>
+                           <div class="d-block d-md-flex d-lg-flex">
+                               <div class="col-12 col-md-6 col-lg-6 px-1 px-md-4 px-lg-4">
+                                   <div><label for="">Mobile/Whatsapp</label></div>
+                                   <div><input type="number" placeholder="03xx-xxxxxxx" value="{{userData.phone}}" class="w-100 p-2 form-control"></div>
+                               </div>
+                               <div class="col-12 col-md-6 col-lg-6 px-1 px-md-4 px-lg-4">
+                                   <div><label for="">Gender</label></div>
+                                   <div class="d-flex">
+                                       <div class="col-6">
+                                           <label for="male" class="mx-4">male</label>
+                                           <input type="radio" name="gender" id="male" value="male" class="p-2 ">
+                                       </div>
+                                       <div class="col-6">
+                                           <label for="female" class="mx-4">Female</label>
+                                           <input type="radio" name="gender" id="female" value="male" class="p-2 ">
+                                        </div>
+                                    </div>
+                               </div>
+
+                           </div>
+                           <div class="d-block d-md-flex d-lg-flex">
+                               <div class="col-12 col-md-6 col-lg-6 px-1 px-md-4 px-lg-4">
+                                   <div><label for="">Desination</label></div>
+                                   <div>
+                                       <select name="" id="" class="p-2 form-control">
+                                           <option value="" class="text-dark">--Select--</option>
+                                           <option value="" class="text-dark">Managing Director (MD)</option>
+                                           <option value="" class="text-dark">General Manager (GM)</option>
+                                           <option value="" class="text-dark">Branch Manager</option>
+                                           <option value="" class="text-dark">Sales Manager</option>
+                                           <option value="" class="text-dark">Marketing Manager</option>
+                                           <option value="" class="text-dark">Finance/Accounts Manager</option>
+                                           <option value="" class="text-dark">Team Leader/ Supervisor</option>
+                                           <option value="" class="text-dark">Senior Property Consultant/ Senior Agent</option>
+                                           <option value="" class="text-dark">Property Consultant/ Real Estate Agent</option>
+                                           <option value="" class="text-dark">Trainee/Junior Agent/Inter</option>
+
+                                       </select>
+                                    </div>
+                               </div>
+                               <div class="col-12 col-md-6 col-lg-6 px-1 px-md-4 px-lg-4">
+                                   <div><label for="">City</label></div>
+                                   <div>
+                                       <select class="p-2 w-100 form-control" value="{{userData.city}}">
+                                           <option value="">--Select--</option>
+                                            <option 
+                                           *ngFor="let city of cityList" value="{{city.value}}"
+                                           >
+                                               {{city.cityName}}
+                                        	</option>
+                                        </select>
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="d-flex ">
+                               <div class="col-12 px-1 px-md-4 px-lg-4">
+                                   <div><label for="">Address</label></div>
+                                   <div><input type="text" value="{{userData.address}}"  class="w-100 p-2 form-control"></div>
+                               </div>
+                           </div>
+                           <div class="d-flex">
+                               <div class="col-12 px-1 px-md-4 px-lg-4">
+                                   <div><label for="">Upload a Picture</label></div>
+                                   <div><input type="file"  class="w-100 form-control   p-2"></div>
+                               </div>
+                           </div>
+                           <div class="submit m-4 text-center" >
+                               <button class="btn btn-outline-light px-4 py-2 ">Add Member</button>
+                           </div>
+
+                       </form>
+                   </div>
+               </div>
+           </div>
+           <div class="col-1"></div>
+
+       </div>
+    </div>
+   </div>

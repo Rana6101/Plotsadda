@@ -27,6 +27,8 @@ export class BuyComponent {
     this.filterMaxPrice = this.maxPrice
 
   }
+
+  BASE_URL = this._service.BASE_URL
   filterMinPrice:any=[]
   minPriceValue:any = "--Select--"
   maxPriceValue:any = "--Select--"

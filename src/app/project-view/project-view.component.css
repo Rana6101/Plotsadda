@@ -14,8 +14,14 @@
     margin: 20px;
 }
 .sec1 img{
-    width: 500px;
+    /* width: 500px; */
+    height: 95%;
 }
 .project_map img{
     width: 80vw;
+}
+.payment_plan_sec{
+    height: 380px;
+    padding: 50px;
+    background: rgb(226, 226, 226);
 }

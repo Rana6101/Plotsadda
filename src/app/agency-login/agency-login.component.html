@@ -1,0 +1,140 @@
+<div id="container" class="container-fluid">
+		<!-- FORM SECTION -->
+		<div class="row">
+			<!-- SIGN UP -->
+			<div class="col align-items-center flex-col sign-up">
+				<div class="form-wrapper align-items-center">
+					<div class="form sign-up">
+						<form [formGroup]="agencyForm">
+							<div class="input-group">
+								<i class='bx bxs-user'></i>
+								<input type="text" formControlName="agencyName" placeholder="Agency Name">
+							</div>
+							<!-- <div class="input-group">
+								<i class='bx bxs-user'></i>
+								<input type="text" placeholder="Owner Name">
+							</div> -->
+							<div class="input-group">
+								<i class='bx bx-mail-send'></i>
+								<input type="email" placeholder="Email" formControlName="email">
+							</div>
+							<div class="input-group">
+								<i class='bx bx-mail-send'></i>
+								<input type="number" placeholder="Phone No." formControlName="phone">
+							</div>
+							<!-- <div class="input-group">
+								<i class='bx bxs-user'></i>
+								<input type="text" placeholder="City">
+							</div> -->
+							<!-- <div class="input-group">
+								<i class='bx bxs-user'></i>
+								<input type="text" placeholder="Area">
+							</div> -->
+
+							<div class="input-group">
+								<i class='bx bxs-lock-alt'></i>
+								<input type="password" placeholder="Password" formControlName="password">
+							</div>
+							<div class="input-group">
+								<i class='bx bxs-lock-alt'></i>
+								<input type="password" placeholder="Confirm password" formControlName="confirmPassword">
+							</div>
+							<div class="input-group">
+								<label for="" class="agency_logo_label">Agency Logo</label>
+								<i class='bx bxs-user'></i>
+								<input type="file" placeholder="Profile Pic" (change)="onFileSelected($event)" name='logo'>
+							</div>
+							<div class="input-group">
+								<i class='bx bxs-user'></i>
+								<div class="d-flex col-12 text-center">
+									<input type="checkbox" class="w-25" placeholder="check" formControlName="agreeCheck"> 
+									<label for="">Agree Term & conditions</label>
+								</div>
+							</div>
+							<button class="btn btn-success" (click)="registerAgency()">
+								Sign up
+							</button>
+						</form>
+						<p>
+							<span>
+								Already have an account?
+							</span>
+							<b (click)="toggle()" class="pointer">
+								Sign in here
+							</b>
+						</p>
+					</div>
+				</div>
+			
+			</div>
+			<!-- END SIGN UP -->
+			<!-- SIGN IN -->
+			<div class="col align-items-center flex-col sign-in">
+				<div class="form-wrapper align-items-center">
+					<div class="form sign-in">
+						<form [formGroup]="loginForm">
+							<div class="input-group">
+								<i class='bx bxs-user'></i>
+								<input type="email" placeholder="Email" formControlName="email">
+							</div>
+							<div class="input-group">
+								<i class='bx bxs-lock-alt'></i>
+								<input type="password" placeholder="Password" formControlName="password">
+							</div>
+							<button class="btn" (click)="login()">
+								Sign in
+							</button>
+						</form>
+						<p>
+							<b>
+								Forgot password?
+							</b>
+						</p>
+						<p>
+							<span>
+								Don't have an account?
+							</span>
+							<b (click)="toggle()" class="pointer">
+								Sign up here
+							</b>
+						</p>
+					</div>
+				</div>
+				<div class="form-wrapper">
+		
+				</div>
+			</div>
+			<!-- END SIGN IN -->
+		</div>
+		<!-- END FORM SECTION -->
+		<!-- CONTENT SECTION -->
+		<div class="row content-row">
+			<!-- SIGN IN CONTENT -->
+			<div class="col align-items-center flex-col">
+				<div class="text sign-in">
+					<h2 class="text-light">
+						Welcome
+					</h2>
+	
+				</div>
+				<div class="img sign-in">
+		
+				</div>
+			</div>
+			<!-- END SIGN IN CONTENT -->
+			<!-- SIGN UP CONTENT -->
+			<div class="col align-items-center flex-col">
+				<div class="img sign-up">
+				
+				</div>
+				<div class="text sign-up">
+					<h2 class="text-light">
+						Join with us
+					</h2>
+	
+				</div>
+			</div>
+			<!-- END SIGN UP CONTENT -->
+		</div>
+		<!-- END CONTENT SECTION -->
+	</div>

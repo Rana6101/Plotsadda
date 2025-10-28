@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+.banner{
+    height: 45vh;
+    background: url('../../assets/term.png');
+    background-repeat: round;
+}
+.banner h1{
+    margin: 18vh 100px;
+}
+h1, h2{
+    font-family: 'Playfair Display';
+    font-weight: bolder;
+    text-decoration: underline;
+}
+p{
+    font-family: 'lato';
+    font-size: 18px;
+    text-align: justify;
+
+}
+.wrapper{
+    border: 3px solid black;
+    border-radius: 25px;
+}
+
+.indent{
+    margin-left: 25px;
+}
+@media only screen and (max-width: 600px) {
+    .banner{
+        background: url('../../assets/mobile-termofuse.jpg');
+        background-repeat: round;
+
+    }
+}

@@ -12,9 +12,11 @@ export class BlogComponent {
     this.getAllBlog();
     
   }
+  IMG_BASE_URL:any = this._service.IMG_BASE_URL
+
   blog_list:any
   getAllBlog(){
-    this._service.getBlogs().subscribe((data)=>{
+    this._service.getBlogs().subscribe((data:any)=>{
       this.blog_list = data
       this.blog_list = this.blog_list.data
       console.log(this.blog_list)

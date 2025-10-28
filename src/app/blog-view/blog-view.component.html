@@ -2,7 +2,7 @@
     <div class="container my-4">
         <div *ngIf="blogDetail">
             <div class="blog_img_container">
-                <img class="blog_img" src="{{blogDetail.blog_pic_file}}" alt="">
+                <img class="blog_img" [src]="IMG_BASE_URL + blogDetail.blog_pic" alt="">
                 <div class="img_title">
                     <h3 class="text-light">{{ blogDetail.blog_title }}</h3>
                     <p class="post_info">
@@ -11,8 +11,8 @@
                 </div>
             </div>
             <div class="blog_detail d-flex">
-                <div class="blog_description col-10 col-md-8 col-lg-9">
-                    <p>{{ blogDetail.blog_des }}</p> 
+                <div class="blog_description col-10 col-md-8 col-lg-9" [innerHTML]="blogDetail.blog_des">
+                    <!-- <p>{{ blogDetail.blog_des }}</p>  -->
                 </div>
                 <div class="col-lg-3 col-md-4 col-10 m-4 side_box">
                     <div>

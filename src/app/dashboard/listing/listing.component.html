@@ -152,7 +152,7 @@
                         <div class="col-12 px-0 px-md-2 px-lg-2">
                           <div><label for="">City</label></div>
                           <div>
-                              <select class="p-2 w-100 form-control" formControlName="city">
+                              <select class="p-2 w-100 form-control" formControlName="city" #cityName (change)="oncitychange(cityName.value)">
                                   <option value="">--Select--</option>
                                   <option *ngFor="let city of cityList" value="{{city.value}}">{{city.cityName}}</option>     
                                 </select>
@@ -162,7 +162,13 @@
                       <div class="d-flex ">
                           <div class="col-12 px-0 px-md-2 px-lg-2">
                               <div><label for="">Location</label></div>
-                              <div><input type="text" formControlName="location"  class="w-100 p-2 form-control" ></div>
+                              <div>
+                                <select class="p-2 w-100 form-control" formControlName="location" id="">
+                                  <option value="">--Select--</option>
+                                  <option *ngFor="let area of filterLocation" value="{{area.location}}">{{area.location}}</option>     
+                                </select>
+                                <!-- <input type="text" formControlName="location"  class="w-100 p-2 form-control" > -->
+                              </div>
                           </div>
                       </div>
                 </div>
@@ -377,7 +383,7 @@
                         <div class="col-12 px-0 px-md-2 px-lg-2 py-2">
                             <div><label for="">Property Images</label></div>
                             <div class="d-flex">
-                              <input type="file" formControlName="property_img_path" (change)="onUploadChange($event)" class="form-control w-100 p-2">
+                              <input type="file" multiple accept=".jpg, .png, .pdf, .jpeg" name="property_img" (change)="onUploadChange($event)" class="form-control w-100 p-2">
                             </div>
                         </div>
                     </div>

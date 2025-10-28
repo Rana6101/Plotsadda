@@ -4,11 +4,11 @@
 		<form class="registerForm" [formGroup]="registerForm" (ngSubmit)="register()">
 			<h1>Create Account</h1>
 			<div class="social-container">
-				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+				<!-- <a href="#" class="social"><i class="fab fa-facebook-f"></i></a> -->
+				<a href="#" class="social"><i class="fab fa-google"></i></a>
+				<!-- <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a> -->
 			</div>
-			<span>or use your email for registration</span>
+			<span>Use your Email for Registration</span>
 			<input class="w-100" formControlName="name" type="text" placeholder="Name" />
 			<input class="w-100" formControlName="email" type="email" placeholder="Email" />
 			<input class="w-100" formControlName="password" type="password" placeholder="Password" />
@@ -21,21 +21,31 @@
 				</div>
 				
 			</div>
-			<div class="agent_box" *ngIf="is_Agent==true">
+			<div class="agent_box">
 				<div>
 					<input class="checkbox m-2" type="checkbox" id="type_check" value="agent" formControlName="role" (change)="landlordCheck()">
-					<label for="type_check">I am a landlord or Professional</label>
+					<label for="type_check">Register as an Agent</label>
 				</div>
 				<div class="prof_check" *ngIf="landloadChk">
+					<input class="w-100" formControlName="phone" type="number" placeholder="Phone No.">
 					<select name="" id="" class="w-100" formControlName="city">
 						<option value="">--Select City</option>
 						<option *ngFor="let city of cityList" value="{{city.value}}">{{city.cityName}}</option>
 					</select>
-					<input class="w-100" formControlName="agency_name" type="text" placeholder="Agency Name">
-					<input class="w-100" formControlName="company_email" type="email" placeholder="Company Email">
-					<input class="w-100" formControlName="agency_address" type="text" placeholder="Agency Address">
-					<input class="w-100" formControlName="phone" type="number" placeholder="Phone No.">
-					<input class="" formControlName="profile_pic" type="file" placeholder="Company Logo">
+					<select name="" id="" class="w-100" formControlName="gender">
+						<option value="">--Select--</option>
+						<option value="male">Male</option>
+						<option value="female">Female</option>
+					</select>
+					<div>
+						<label for="profile_pic text-left">Add Profile Pic:</label>
+
+						<input class="" accept=".png, .jpg, .jpeg, .pdf" name="profile_pic" type="file" (change)="onFileSelected($event)" placeholder="Profile Pic">
+					</div>
+					<div>
+						<input class="checkbox m-2" id="term_agree" type="checkbox" value="agree" formControlName="agree_check">
+						<label for="term_agree">I agree with PlotAdda.com terms.</label>
+					</div>
 					
 				</div>
 			</div>
@@ -49,9 +59,9 @@
 		<form [formGroup]="loginForm" (ngSubmit)="logIn()">
 			<h1>Sign in</h1>
 			<div class="social-container">
-				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+				<!-- <a href="#" class="social"><i class="fab fa-facebook-f"></i></a> -->
+				<a href="#" class="social"><i class="fab fa-google"></i></a>
+				<!-- <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a> -->
 			</div>
 			<span>or use your account</span>
 			<input class="w-100" type="email" formControlName="email" placeholder="Email" />
@@ -64,11 +74,11 @@
 		<div class="overlay">
 			<div class="overlay-panel overlay-left">
 				<h1 class="text-light">Welcome Back!</h1>
-				<p>To keep connected with us please login with your personal info</p>
+				<p>Stay connected - Just login with your credentials.</p>
 				<button class="ghost" id="signIn" (click)="removeClass()">Sign In</button>
 			</div>
 			<div class="overlay-panel overlay-right">
-				<h1 class="text-light">Hello, Friend!</h1>
+				<h1 class="text-light">Join PlotAdda Family!</h1>
 				<p>Enter your personal details and start journey with us</p>
 				<button class="ghost" id="signUp" (click)="addClass()">Sign Up</button>
 			</div>

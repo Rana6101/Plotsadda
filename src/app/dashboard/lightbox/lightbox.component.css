@@ -1,0 +1,59 @@
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(175, 172, 172, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+  }
+  
+  .modal {
+    position: relative;
+    max-width: 90vw;
+    max-height: 85vh;
+  }
+  
+  img {
+    max-width: 90vw;
+    max-height: 85vh;
+    border-radius: 12px;
+    box-shadow: 0 5px 30px rgba(112, 77, 77, 0.5);
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    border: none;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 6px 10px;
+  }
+  
+  .nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.1);
+    color: white;
+    border: none;
+    font-size: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 8px 12px;
+  }
+  
+  .nav-btn.left { left: -50px; }
+  .nav-btn.right { right: -50px; }
+  
+  .counter {
+    text-align: center;
+    margin-top: 8px;
+    color: white;
+    font-size: 14px;
+  }
+  

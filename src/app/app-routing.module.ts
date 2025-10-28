@@ -17,6 +17,9 @@ import { LoginComponent } from './login/login.component';
 import { BlogViewComponent } from './blog-view/blog-view.component';
 import { PropertyViewComponent } from './property-view/property-view.component';
 import { ProjectViewComponent } from './project-view/project-view.component';
+import { AgencyIntroComponent } from './agency-intro/agency-intro.component';
+import {AgencyLoginComponent} from './agency-login/agency-login.component'
+import { AgencyTermAndConditionsComponent } from './agency-term-and-conditions/agency-term-and-conditions.component';
 
 const routes: Routes = [
   {
@@ -29,6 +32,10 @@ const routes: Routes = [
     loadChildren: ()=> import('./dashboard/dashboard.module').then(m=> m.DashboardModule)
   },
   {
+    path:'agency_dashboard',
+    loadChildren: ()=> import('./agency-dashboard/agency-dashboard.module').then(m=> m.AgencyDashboardModule)
+  },
+  {
     path:"home",
     component:HomeComponent
   },
@@ -39,6 +46,10 @@ const routes: Routes = [
   {
     path:"advertise",
     component:AdvertiseComponent
+  },
+  {
+    path:"agency",
+    component:AgencyIntroComponent
   },
   {
     path:"agent",
@@ -95,7 +106,15 @@ const routes: Routes = [
   {
     path:'login',
     component:LoginComponent
-  }
+  },
+  {
+    path:'agency-login',
+    component:AgencyLoginComponent
+  },
+  {
+    path:'agency_terms',
+    component:AgencyTermAndConditionsComponent
+  },
 
 ];
 

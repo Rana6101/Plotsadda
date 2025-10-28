@@ -1,4 +1,4 @@
-<div class="content-container1" style="background-color: #004623; padding: 5px 30px; left: 0; width: 100%;">
+<div class="content-container1" style="position:sticky; top:0; background-color: #004623; padding: 5px 30px; left: 0; width: 100%;">
     <div class="row">
       
 <!-- Buy and rent drop dropdown -->
@@ -173,7 +173,7 @@
                       <div class="d-flex">
                           <div class="image-container  w-50">
                             <span class="px-2 bg-danger text-light hot">HOT</span>
-                          <img class="card-img-top  w-100" src="{{property.property_img}}" alt="Card image cap">
+                          <img class="card-img-top  w-100" style="object-fit: revert;" [src]="BASE_URL + '/listing/file/' + property.property_img[0]" alt="Card image cap">
                           <div class="icon-text">
                             <i class="fa fa-camera"></i> <span  class="mr-2 ms-1">28</span>
                         </div>

@@ -1,0 +1,22 @@
+*{
+    color: #fafafa;
+
+}
+.setting{
+    background: #fafafa;
+}
+.banner{
+    height: 45vh;
+    background: url('../../../assets/AgencyCreateTeam.jpg');
+    background-repeat: round;
+}
+.user{
+    background: #191C24;
+    border-radius: 25px;
+}
+.user .user-profile-pic{
+    /* border-radius: 50%; */
+    align-items: center;
+    width: 100px;
+    height: 95px;
+}

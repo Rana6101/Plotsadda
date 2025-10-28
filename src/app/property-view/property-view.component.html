@@ -4,7 +4,7 @@
         <div class="container">
             <div class="container">
                 <h2>{{propertyDetail.ad_title ||''}}</h2>
-                <h4>{{propertyDetail.location}}</h4>
+                <h4 class="property_location">{{propertyDetail.location}}</h4>
             </div>
         </div>
         <hr>
@@ -18,7 +18,27 @@
                 <div class="">            
                    <div class="show-property">
                         <div class="property_img col-md-8 col-12 py-2">
-                            <img class="w-100 product-img" src="{{propertyDetail.property_img}}" alt="">
+                            <div id="carouselExampleAutoplaying" class="background-layer carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active " >
+                                        <img [src]="BASE_URL + '/listing/file/' + propertyDetail.property_img[0]" class="d-block w-100 property_img"
+                                        (click)="openLightbox(0, BASE_URL + '/listing/file/' + propertyDetail.property_img[0])" alt="">
+                                        
+                                      </div>
+                                  <div class="carousel-item " *ngFor='let img of propertyDetail.property_img, let i = index' >
+                                    <img [src]="BASE_URL + '/listing/file/' + img" class="d-block w-100 property_img"
+                                    (click)="openLightbox(i, BASE_URL + '/listing/file/' + img)" alt=".....">
+                                  </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Next</span>
+                                </button>
+                              </div>                         
                             <div class="p-4">
                                 <p class="mb-0">
                                     <i class="fa fa-bed"></i> {{propertyDetail.no_of_bedroom}} Beds
@@ -72,6 +92,32 @@
                                     <td>{{propertyDetail.createdAt | date}}</td>
                                 </tr>
                             </table>
+                            </div>
+                            <div *ngIf="propertyDetail.installment_status" class="detail_table d-block col-12">
+                                <hr>
+                                <h3 class="col-12 d-block">Installment Plan</h3>
+                                <div  class="col-12 d-flex">
+                                <table class="col-6">
+                                    <tr>
+                                        <td>Installment Available</td>
+                                        <td>Yes</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Advance Amount</td>
+                                        <td>{{propertyDetail.advance}}</td>
+                                    </tr>
+                            </table>
+                            <table class="col-6 ">
+                                <tr>
+                                    <td>No. of Installment</td>
+                                    <td>{{propertyDetail.no_of_installments}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Installment Amount</td>
+                                    <td>{{propertyDetail.installment_amount}}</td>
+                                </tr>
+                            </table>
+                        </div>
                         </div>
                         <hr> 
                             <div class="description" *ngIf="propertyDetail.ad_description">
@@ -89,27 +135,27 @@
                                         <div class="col-10">
                                             <ul class="sec1-list">
                                                 <li class="_59261156">
-                                                    <i class="fa fa-bed"></i>
+                                                    <span><img class="detail_icon" src="../../assets/Property-Age.png" alt=""></span>
                                                     <span class="opt_li p-2">Property Age:</span>
                                                 </li>
                                                 <li class="_59261156">
-                                                    <i class="fa fa-bed"></i>
+                                                    <span><img class="detail_icon" src="../../assets/Parking-Availability.png" alt=""></span>
                                                     <span class="opt_li p-2">Parking Availability</span>
                                                 </li>
                                                 <li class="_59261156">
-                                                    <i class="fa fa-bed"></i>
+                                                    <span><img class="detail_icon" src="../../assets/power-bank_2350870.png" alt=""></span>
                                                     <span class="opt_li p-2">Power Backup</span>
                                                 </li>
                                                 <li class="_59261156">
-                                                    <i class="fa fa-bed"></i>
+                                                    <span><img class="detail_icon" src="../../assets/waste-management.png" alt=""></span>
                                                     <span class="opt_li p-2">Waste Management System</span>
                                                 </li>
                                                 <li class="_59261156">
-                                                    <i class="fa fa-bed"></i>
+                                                    <span><img class="detail_icon" src="../../assets/Total Floors.png" alt=""></span>
                                                     <span class="opt_li p-2">Total Floors: 2</span>
                                                 </li>
                                                 <li class="_59261156">
-                                                    <i class="fa fa-bed"></i>
+                                                    <span><img class="detail_icon" src="../../assets/Additional Unique Features.png" alt=""></span>
                                                     <span class="opt_li p-2">Additional Unique Features</span>
                                                 </li>
                                             </ul>
@@ -128,35 +174,35 @@
                                                     <span class="opt_li p-2">Total Bedrooms: {{propertyDetail.no_of_bedroom}}</span>
                                                 </li>
                                                 <li class="_59261156">
-                                                    <i class="fa fa-bed"></i>
+                                                    <span><img class="detail_icon" src="../../assets/bathroom.png" alt=""></span>
                                                     <span class="opt_li p-2">Total Bathrooms: {{propertyDetail.no_of_bath}}</span>
                                                 </li>
                                                 <li class="_59261156">
-                                                    <i class="fa fa-bed"></i>
+                                                    <span><img class="detail_icon" src="../../assets/Servant Quarters.png" alt=""></span>
                                                     <span class="opt_li p-2">Servant Quarters: 2</span>
                                                 </li>
                                                 <li class="_59261156">
-                                                    <i class="fa fa-bed"></i>
+                                                    <span><img class="detail_icon" src="../../assets/Formal Drawing Room.png" alt=""></span>
                                                     <span class="opt_li p-2">Formal Drawing Room</span>
                                                 </li>
                                                 <li class="_59261156">
-                                                    <i class="fa fa-bed"></i>
+                                                    <span><img class="detail_icon" src="../../assets/Elegant Dining Room.png" alt=""></span>
                                                     <span class="opt_li p-2">Elegant Dining Room</span>
                                                 </li>
                                                 <li class="_59261156">
-                                                    <i class="fa fa-bed"></i>
+                                                    <span><img class="detail_icon" src="../../assets/Modern Kitchens.png" alt=""></span>
                                                     <span class="opt_li p-2">Modern Kitchens: 2</span>
                                                 </li>
                                                 <li class="_59261156">
-                                                    <i class="fa fa-bed"></i>
+                                                    <span><img class="detail_icon" src="../../assets/Guest Powder Room.png" alt=""></span>
                                                     <span class="opt_li p-2">Guest Powder Room</span>
                                                 </li>
                                                 <li class="_59261156">
-                                                    <i class="fa fa-bed"></i>
+                                                    <span><img class="detail_icon" src="../../assets/Spacious Living Area.png" alt=""></span>
                                                     <span class="opt_li p-2">Spacious Living Area</span>
                                                 </li>
                                                 <li class="_59261156">
-                                                    <i class="fa fa-bed"></i>
+                                                    <span><img class="detail_icon" src="../../assets/Laundry Space.png" alt=""></span>
                                                     <span class="opt_li p-2">Dedicated Laundry Space</span>
                                                 </li>
                                             </ul>
@@ -171,15 +217,15 @@
                                         <div class="col-10">
                                             <ul class="sec1-list">
                                                 <li class="_59261156">
-                                                    <i class="fa fa-bed"></i>
+                                                    <span><img class="detail_icon" src="../../assets/Premium Flooring.png" alt=""></span>
                                                     <span class="opt_li p-2">Premium Flooring</span>
                                                 </li>
                                                 <li class="_59261156">
-                                                    <i class="fa fa-bed"></i>
+                                                    <span><img class="detail_icon" src="../../assets/Water Supply.png" alt=""></span>
                                                     <span class="opt_li p-2">Water Supply 24/7</span>
                                                 </li>
                                                 <li class="_59261156">
-                                                    <i class="fa fa-bed"></i>
+                                                    <span><img class="detail_icon" src="../../assets/Gass Supply.png" alt=""></span>
                                                     <span class="opt_li p-2">Gass Supply</span>
                                                 </li>
                                             </ul>
@@ -194,19 +240,19 @@
                                         <div class="col-10">
                                             <ul class="sec1-list">
                                                 <li class="_59261156">
-                                                    <i class="fa fa-bed"></i>
+                                                    <span><img class="detail_icon" src="../../assets/Internet.png" alt=""></span>
                                                     <span class="opt_li p-2">High-Speed Internet </span>
                                                 </li>
                                                 <li class="_59261156">
-                                                    <i class="fa fa-bed"></i>
+                                                    <span><img class="detail_icon" src="../../assets/Cable satellite.png" alt=""></span>
                                                     <span class="opt_li p-2">Cable TV & Satellite Ready</span>
                                                 </li>
                                                 <li class="_59261156">
-                                                    <i class="fa fa-bed"></i>
+                                                    <span><img class="detail_icon" src="../../assets/Intercom.png" alt=""></span>
                                                     <span class="opt_li p-2">Intercom Installed</span>
                                                 </li>
                                                 <li class="_59261156">
-                                                    <i class="fa fa-bed"></i>
+                                                    <span><img class="detail_icon" src="../../assets/Other Communication Facilities.png" alt=""></span>
                                                     <span class="opt_li p-2">Other Communication Facilities</span>
                                                 </li>
                                             </ul>
@@ -221,43 +267,43 @@
                                         <div class="col-10">
                                             <ul class="sec1-list">
                                                 <li class="_59261156">
-                                                    <i class="fa fa-bed"></i>
+                                                    <span><img class="detail_icon" src="../../assets/Green Parks.png" alt=""></span>
                                                     <span class="opt_li p-2">Lush Green Parks & Gardens</span>
                                                 </li>
                                                 <li class="_59261156">
-                                                    <i class="fa fa-bed"></i>
+                                                    <span><img class="detail_icon" src="../../assets/Swimming Pool.png" alt=""></span>
                                                     <span class="opt_li p-2">Exclusive Swimming Pool</span>
                                                 </li>
                                                 <li class="_59261156">
-                                                    <i class="fa fa-bed"></i>
+                                                    <span><img class="detail_icon" src="../../assets/State of the Art Fitness Center.png" alt=""></span>
                                                     <span class="opt_li p-2">State-of-the-Art Fitness Center</span>
                                                 </li>
                                                 <li class="_59261156">
-                                                    <i class="fa fa-bed"></i>
+                                                    <span><img class="detail_icon" src="../../assets/Medical & First Aid Facility.png" alt=""></span>
                                                     <span class="opt_li p-2">Medical & First Aid Facility</span>
                                                 </li>
                                                 <li class="_59261156">
-                                                    <i class="fa fa-bed"></i>
+                                                    <span><img class="detail_icon" src="../../assets/Childcare.png" alt=""></span>
                                                     <span class="opt_li p-2">Childcare & Daycare Services</span>
                                                 </li>
                                                 <li class="_59261156">
-                                                    <i class="fa fa-bed"></i>
+                                                    <span><img class="detail_icon" src="../../assets/Children's Play Area.png" alt=""></span>
                                                     <span class="opt_li p-2">Children’s Play Area</span>
                                                 </li>
                                                 <li class="_59261156">
-                                                    <i class="fa fa-bed"></i>
+                                                    <span><img class="detail_icon" src="../../assets/Barbecue & Picnic Spots.png" alt=""></span>
                                                     <span class="opt_li p-2">Barbecue & Picnic Spots</span>
                                                 </li>
                                                 <li class="_59261156">
-                                                    <i class="fa fa-bed"></i>
+                                                    <span><img class="detail_icon" src="../../assets/Mosque.png" alt=""></span>
                                                     <span class="opt_li p-2">Grand Mosque </span>
                                                 </li>
                                                 <li class="_59261156">
-                                                    <i class="fa fa-bed"></i>
+                                                    <span><img class="detail_icon" src="../../assets/Community Hall.png" alt=""></span>
                                                     <span class="opt_li p-2">Fully Equipped Community Hall</span>
                                                 </li>
                                                 <li class="_59261156">
-                                                    <i class="fa fa-bed"></i>
+                                                    <span><img class="detail_icon" src="../../assets/Other Communication Facilities.png" alt=""></span>
                                                     <span class="opt_li p-2">Other Social & Community Amenities</span>
                                                 </li>
                                             </ul>
@@ -272,11 +318,11 @@
                                         <div class="col-10">
                                             <ul class="sec1-list">
                                                 <li class="_59261156">
-                                                    <i class="fa fa-bed"></i>
+                                                    <span><img class="detail_icon" src="../../assets/Private Garden or Lawn.png" alt=""></span>
                                                     <span class="opt_li p-2">Private Garden or Lawn</span>
                                                 </li>
                                                 <li class="_59261156">
-                                                    <i class="fa fa-bed"></i>
+                                                    <span><img class="detail_icon" src="../../assets/Relaxing Jacuzzi.png" alt=""></span>
                                                     <span class="opt_li p-2">Relaxing Jacuzzi Experience</span>
                                                 </li>
                                                 <li class="_59261156">
@@ -352,6 +398,7 @@
                                 
                             </div>
                         </div>
+                        
                     </div>
                 </div>
             </div>
@@ -445,3 +492,9 @@
         </div>
     </div>
 </div>
+
+<app-lightbox
+  [images]="photos"
+  [open]="lightboxOpen"
+  [initialIndex]="selectedIndex"
+></app-lightbox>
